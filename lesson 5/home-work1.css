@@ -1,0 +1,114 @@
+body {
+  background-image: url(../../images/windows-g39e279691_1920.jpg);
+  text-align: center;
+  font-size: 35px;
+  background-size: cover;
+}
+
+label {
+  display: block;
+  padding: 10px;
+}
+.frame {
+  width: 90%;
+  min-height: 600px;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: auto;
+  border-radius: 10px;
+  overflow: auto;
+}
+header {
+  height: 180px;
+  background: linear-gradient(purple, white);
+}
+footer {
+  margin-top: 20px;
+  height: 140px;
+  background: linear-gradient(white, purple);
+}
+
+h1 {
+  margin: 0;
+  padding: 25;
+  padding-top: 40px;
+  text-shadow: 2px 2px 2px white;
+}
+.field {
+  margin: 8px 16px;
+}
+button {
+  background-color: aqua;
+
+  font-size: 25px;
+  margin: 15px;
+  border-radius: 5px;
+  border: 2px solid;
+}
+button:hover {
+  background-color: rgb(132, 128, 187);
+  color: white;
+  box-shadow: 2px 2px 2px black;
+}
+select {
+  width: 100px;
+}
+.navbar {
+  background-color: aquamarine;
+  padding: 30px;
+  margin-top: 0;
+  border-radius: 5px;
+  border: 2px solid black;
+}
+.navbar > a {
+  padding: 10px;
+  background-color: aqua;
+  border-radius: 8px;
+  text-decoration: none;
+  color: black;
+  border: 2px solid black;
+}
+.navbar > a:hover {
+  padding: 10px;
+  background-color: rgb(132, 128, 187);
+  color: white;
+  box-shadow: 5px 10px 5px rgb(0, 0, 0);
+  border: 2px solid black;
+}
+.body-form {
+  background-image: url(../../images/leopard\ pattern.jpg);
+}
+.pizza {
+  width: 300px;
+  padding: 20px 40px;
+}
+p {
+  background-color: blueviolet;
+  text-shadow: 2px 2px 2px white;
+}
+
+nav .current {
+  background-color: rgb(132, 128, 187);
+  color: white;
+  box-shadow: 5px 10px 5px rgb(0, 0, 0);
+  border: 2px solid black;
+}
+/*
+#page1 {
+    padding: 10px;
+    background-color: blueviolet;
+    box-shadow: 5px 5px 10px black;
+    color: rgb(0, 0, 0);
+    border: 3px solid rgb(255, 255, 255);
+}#page2 {
+    padding: 10px;
+    background-color: blueviolet;
+    box-shadow: 5px 5px 10px black;
+    color: rgb(0, 0, 0);
+    border: 3px solid rgb(255, 255, 255);
+}#page3 {
+    padding: 10px;
+    background-color: blueviolet;
+    box-shadow: 5px 5px 10px black;
+    color: rgb(0, 0, 0);
+    border: 3px solid rgb(255, 255, 255);
+}*/

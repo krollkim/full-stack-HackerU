@@ -1,0 +1,89 @@
+body {
+    background-color: rgb(170, 247, 247);
+    margin: 0px;
+     text-align: center;
+  }
+  
+ 
+  header {
+    background-color: rgb(92, 158, 158);
+    color: white;
+    height: 100px;
+    font-size: 35px;
+  }
+  h1 {
+    margin: 0;
+    padding: 16px 8px;
+    color: white;
+    font-size: 40px;
+  }
+    #frame{
+    width: 65%;
+    min-height: 800px;
+    background-color: rgba(192, 133, 247, 0.654);
+    box-shadow: 2px 2px 2px 2px;
+    margin: 50px auto;
+    box-shadow: 0px 0px 40px black;
+    border-radius: 8px;
+    }
+
+  /* .card {
+      
+      display: flex;
+    width: 400px;
+    height: 400px;
+    background-color: rgb(143, 203, 240);
+    margin: 50px auto;
+    
+  } */
+
+  #b1,
+#b2,
+#b3,
+#b4,
+#b5,
+#b6,
+#b7,
+#b8,
+#b9 {
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    background-color: rgb(167, 104, 225);
+    font-size: 50px;
+    color: white;
+    text-align: center;
+}
+
+  /* .squere{
+      border: 1px solid black;
+      width: 140px;
+      height: 150px;
+      background-color: rgb(101, 105, 216);
+      z-index: 1;
+  }
+  #b1, #b2, #b3, #b4, #b5, #b6, #b7, #b8, #b9 {
+    z-index: 2;
+  } */
+  .squere:hover{
+    background-color: rgb(80, 83, 172);
+  }
+  
+
+  p {
+    font-weight: bold;
+  }
+  
+  span {
+    background-color: rgb(231, 92, 224);
+    border-radius: 5px;
+  }
+ 
+  #output {
+    font-size: 30px;
+    background-color: rgb(92, 158, 158);
+    color: blueviolet;
+  }
+  
+  
+

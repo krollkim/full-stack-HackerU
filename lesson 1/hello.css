@@ -1,0 +1,31 @@
+body {
+    direction: ltr;
+    background-color: darkslategray;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-image: url(images/flower-3140492__340.webp);
+}
+
+td {
+    border: 2px solid rgb(255, 71, 240);
+    padding: 8px;
+    
+}
+
+td:hover{
+background-color: rgb(114, 114, 195);
+font-size: 40px;
+}
+
+h1 {
+    color: aqua;
+}
+
+tr {
+    color: black;
+}
+
+

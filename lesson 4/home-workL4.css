@@ -1,0 +1,90 @@
+body{
+    background-image: url(images/mountain-g95bf3604e_1920.jpg);
+    text-align: center;
+}
+nav{
+    background-color: white;
+ 
+}
+nav a, .dropdown{
+font-size: 25px;
+padding: 8px 16px;
+display: inline-block;
+text-decoration: none;
+color: black;
+position: relative;
+}
+
+nav a:hover, .dropdown:hover{
+background-color: blueviolet;
+color: white;
+
+}
+
+.dropdown .content{
+    display: none;
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    background-color: blueviolet;
+    left: 0;
+    top: 100%;
+    
+}
+.dropdown:hover .content{
+    display: initial;
+    background-color: white;
+}
+.dropdown a{
+    display: block;
+}
+
+.dropdown .about-content{
+    display: none;
+    position: absolute;
+    height: 400%;
+    width: 150px;
+    background-color: blueviolet;
+    left: 0;
+    top: 100%;
+    
+}
+
+.dropdown:hover .about-content{
+    display: initial;
+    background-color: white;
+}
+
+.list{
+    font-size: 35px;
+    list-style-type: disc;
+    display: none;
+}
+
+
+.second-container:hover .list{
+    display: initial;
+    display: inline-block;
+    background-color: aqua;
+
+
+}
+.float-container{
+    background-color: aquamarine;
+    text-align: left;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 70px;
+    float: left;
+    padding: 10px;
+    padding-left: 50px;
+    font-size: 30px;
+}
+.float>p{
+    padding-left: 50px;
+   display: inline-block;
+    width: 60%;
+   
+    
+}
+

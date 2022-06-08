@@ -1,0 +1,78 @@
+body {
+    background-color: rgb(170, 247, 247);
+    margin: 0px;
+  }
+  
+  .section1 {
+    width: 80%;
+    min-height: 500px;
+    background-color: rgba(255, 255, 255, 0.603);
+    margin: auto;
+  }
+  header {
+    background-color: rgb(92, 158, 158);
+    text-align: center;
+    color: white;
+    height: 100px;
+    font-size: 35px
+    
+  }
+  h1 {
+    margin: 0;
+    padding: 16px 8px;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+  }
+  .card {
+    margin: 6px 0px;
+    padding: 8px;
+    border-bottom: 1px solid;
+    text-align: center;
+  }
+  p {
+    font-weight: bold;
+  }
+  
+  span {
+    background-color: rgb(231, 92, 224);
+    border-radius: 5px;
+  }
+  
+  #btn {
+    margin-left: 10px;
+  }
+  #output {
+    font-size: 30px;
+    background-color: rgb(92, 158, 158);
+    color: blueviolet;
+    text-align: center;
+  }
+  
+  #frame{
+    width: 60%;
+    min-height: 500px;
+    background-color: rgba(192, 133, 247, 0.654);
+    box-shadow: 2px 2px 2px 2px;
+    margin: 0 auto;
+    box-shadow: 0px 0px 40px black;
+    border-radius: 8px;
+    margin-bottom: 10px;}
+
+    #list{
+        list-style-type: none;
+    }
+
+    #multiBoard table {
+      direction: ltr;
+      border-collapse: collapse;
+      margin: 0 auto;
+  }
+  
+  #multiBoard td {
+      border: 1px solid;
+      padding: 6px;
+      text-align: center;
+      
+  }
+  

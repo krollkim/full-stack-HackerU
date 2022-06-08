@@ -1,0 +1,154 @@
+body {
+  background-color: rgb(147, 64, 225);
+  margin: 0px;
+   text-align: center;
+}
+
+
+header {
+  background-color: rgb(95, 28, 114);
+  color: white;
+  height: 100px;
+  font-size: 35px;
+}
+h1 {
+  margin: 0;
+  padding: 6px 8px;
+  color: rgb(155, 211, 250);
+  font-size: 40px;
+}
+  #frame{
+  width: 65%;
+  min-height: 800px;
+  background-color: rgba(57, 242, 255, 0.654);
+  box-shadow: 2px 2px 2px 2px;
+  margin: 50px auto;
+  box-shadow: 0px 0px 40px black;
+  border-radius: 8px;
+  }
+
+
+.card {
+  margin: auto;
+  text-align: center;
+  border-bottom: 1px solid;
+  display: inline-block;
+} 
+.card1 {
+  margin: auto;
+  border-bottom: 1px solid;
+} 
+.card2{
+  width: 80%;
+  margin: auto;
+  border: 2px solid black;
+  border-radius: 8px;
+  background-image: url(../images/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-shadow: 2px 2px 2px white;
+  font-weight: bold;
+  font-style: oblique;
+}
+.card3{
+  background: none;
+}
+#submit{
+  width: 50%;
+  margin: auto;
+  background-color: black;
+  color: white;
+  text-shadow: 0px 0px 5px white;
+  font-weight: bold;
+  font-style: oblique;
+}
+p {
+  font-weight: bold;
+  background-color: rgb(183, 87, 176);
+  border-radius: 5px;
+}
+
+#output, #output2, #output3{
+  font-size: 30px;
+  background-color: rgb(92, 158, 158);
+  color: blueviolet;
+  text-align: center;
+  margin: auto;
+}
+#bg{
+  background-image: url(../images/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.btn555{
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border-radius: 8px;
+}
+.tables{
+  background-image: url(../images/windows-g39e279691_1920.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-shadow: none;
+  border: none;
+}
+.tables tr{
+  border: 1px solid white;
+}
+.tables2{
+  color: white;
+  text-shadow: 2px 2px 2px black;
+  margin-bottom: 0;
+  
+}
+table td{
+  height: 80px;
+}
+tbody td:hover{
+  border: 1px solid rgb(0, 255, 238);
+  }
+
+table{
+  margin-bottom: 0px;
+}
+/* 
+
+
+th, td{
+padding: 6px 8px;
+}
+tbody tr:nth-child(odd){
+background-color: rgb(180, 99, 255);
+}
+tbody tr:nth-child(even){
+background-color: rgb(247, 244, 92);
+}
+tbody tr:hover{
+border: 2px solid red;
+}
+#alert{
+ position: fixed;
+  bottom: 8px;
+  margin: auto;
+  left: 0;
+  right: 0;
+  width: 200px;
+  text-align: center;
+  padding: 16px;
+  box-shadow: 2px 1px 6px 1px rgb(73, 73, 73);
+  background-color: rgb(158, 158, 158);
+  color: white;
+  display: none;
+}
+#table .restore{
+display: none;
+}
+
+#trashBin .remove{
+  display: none;
+} */
+
+/* .table table-bordered{
+  table-layout: fixed;
+} */
+

@@ -1,0 +1,22 @@
+body{
+    text-align: center;
+}
+label{
+    display: block;
+    padding: 10px;
+    
+}
+form{
+    text-align: center;
+    border: 2px solid black;
+    width: 300px;
+    margin: auto;
+}
+input:focus{
+    outline: 0;
+    border: 2px solid red ;
+}
+a{
+    font-size: 30px;
+    background-color: aqua;
+}

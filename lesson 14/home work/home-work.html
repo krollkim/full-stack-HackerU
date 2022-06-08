@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>homework-14</title>
+    <link rel="stylesheet" href="home-work.css" />
+    <script src="home-work.js" defer></script>
+  </head>
+
+  <body>
+    <div id="frame">
+      <header>
+        <h1>java-script <br>
+            home-work-14
+        </h1>
+      </header>
+
+      <!-- to add an item to the list : 1 +  -->
+       <!-- to remove items from the list: 2 -->
+      <div class="card">
+        
+        <br><br>
+        <table id="table">
+        </table>
+
+        <button id="btn1" onclick="addItem()">click</button>
+
+      </div>
+      <br>
+
+      <!-- making an array of list through textarea: 3 -->
+      <div class="card">
+        
+        <textarea onkeyup="enterNames()" id="text" cols="30" rows="10"></textarea>
+        <br>
+        <button onclick="showList()" >show list</button>
+        
+       <!-- to clean all the array + output + textareas: 4 -->
+        <button onclick="cleanArr()">clean</button>
+        <ol id="output"></ol>
+
+      </div>
+
+</div>
+
+  </body>
+</html>

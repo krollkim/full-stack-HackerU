@@ -1,0 +1,36 @@
+body {
+    background-color: rgb(147, 64, 225);
+    margin: 0px;
+     text-align: center;
+  }
+  
+  
+  header {
+    background-color: rgb(95, 28, 114);
+    color: white;
+    height: 100px;
+    font-size: 35px;
+  }
+  h1 {
+    margin: 0;
+    padding: 6px 8px;
+    color: rgb(155, 211, 250);
+    font-size: 40px;
+  }
+    #frame{
+    width: 65%;
+    min-height: 800px;
+    background-color: rgba(57, 242, 255, 0.654);
+    box-shadow: 2px 2px 2px 2px;
+    margin: 50px auto;
+    box-shadow: 0px 0px 40px black;
+    border-radius: 8px;
+    }
+  
+  
+  .card {
+    margin: auto;
+    text-align: center;
+    border-bottom: 1px solid;
+  } 
+  

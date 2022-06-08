@@ -1,0 +1,36 @@
+*{
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    direction: rtl;
+   margin: 0;
+   text-align: center;
+}
+
+h1{
+    text-align: center;
+    margin: 0px;
+    padding: 16px;
+    background-color: rgb(167, 255, 255);
+    display: inline-block;
+}
+
+#navbar{
+    background-color: rgb(179, 112, 243);
+        text-align: center;
+}
+.item{
+    display: inline-block;
+    padding: 8px 15px;
+    
+    
+}
+.item:hover{
+    background-color: blueviolet;
+    color: white;
+}
+div{
+    display: block;
+}

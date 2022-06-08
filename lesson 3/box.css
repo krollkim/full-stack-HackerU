@@ -1,0 +1,56 @@
+body{
+direction: ltr;
+}
+#maindiv1{
+    background-color: grey;
+    width: 300px;
+    height: 200px;
+    position: relative;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+#innerdiv1{
+    height: 40px;
+    width: 60px;
+    background-color: rgb(69, 9, 71);
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+#maindiv2{
+    background-color: grey;
+    width: 300px;
+    height: 200px;
+    position: relative;
+    margin: auto;
+    margin-bottom: 10px;
+}
+#maindiv3{
+    background-color: grey;
+    width: 300px;
+    height: 200px;
+    position: relative;
+    margin: auto;
+    margin-bottom: 10px;
+}
+#innerdiv2{
+    height: 40px;
+    width: 60px;
+    background-color: rgb(69, 9, 71);
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+    bottom: 0;
+    top: 0;
+}
+#innerdiv3{
+    height: 40px;
+    width: 60px;
+    background-color: rgb(69, 9, 71);
+    position: absolute;
+    left: 0;
+    margin: auto;
+    bottom: 0;
+}

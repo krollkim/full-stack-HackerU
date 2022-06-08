@@ -1,0 +1,15 @@
+label{
+    display: block;
+}
+.area{
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.wow{
+    background-color: aqua;
+}
+.title{
+
+    background-color: red;
+}

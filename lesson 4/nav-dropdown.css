@@ -1,0 +1,43 @@
+body{
+    text-align: center;
+    background-color: black;
+}
+nav{
+    background-color: rgb(255, 255, 255);
+}
+nav a, .dropdown{
+    padding: 8px 16px;
+    font-size: 25px;
+    display: inline-block;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    position: relative;
+}
+nav a:hover, .dropdown:hover{
+    background-color: rgb(6, 114, 78);
+    color: white;
+}
+
+.dropdown .content{
+    display: none;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: aqua;
+    left: 0;
+    top: 100%;
+
+}
+
+.dropdown:hover .content {
+display: initial;
+}
+
+.dropdown a{
+    display: block;
+}
+a{
+    font-size: 35px;
+    background-color: white;
+    color: black;
+}

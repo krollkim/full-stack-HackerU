@@ -1,0 +1,58 @@
+body {
+    background-color: rgb(170, 247, 247);
+    margin: 0px;
+    direction: rtl;
+    background-image: url(../../../images/tiles-shapes-gd916116eb_1920.jpg);
+    background-size: cover;
+    /* background-size: 110%; */
+    background-position: bottom;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    
+    
+    
+  }
+  
+  .section1 {
+    width: 80%;
+    min-height: 500px;
+    background-color: rgba(255, 255, 255, 0.603);
+    margin: auto;
+  }
+  header {
+    background-color: rgb(92, 158, 158);
+  }
+  h1 {
+    margin: 0;
+    padding: 16px 8px;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+  }
+  .card {
+    margin: 6px 0px;
+    padding: 8px;
+    border-bottom: 1px solid;
+    
+  }
+  p {
+    font-weight: bold;
+  }
+  
+  span {
+    background-color: gold;
+    border-radius: 5px;
+  }
+  
+  #btn {
+    margin-left: 10px;
+  }
+  #output {
+    font-size: 30px;
+    background-color: rgb(92, 158, 158);
+    color: blueviolet;
+    
+  }
+  #list{
+    list-style-type: square;
+  }

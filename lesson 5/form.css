@@ -1,0 +1,56 @@
+body{
+    text-align: center;
+    background-image: url(images/seamless-pattern-fast-food-pizza-black-background-vector-19281384.jpg);
+    background-size: 100%;
+}
+
+label{
+    display: block;
+    padding: 20px;
+    font-size: 35px;
+}
+.frame{
+    width: 90%;
+    min-height: 600px;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: auto;
+    border-radius: 10px;
+    overflow: auto;
+}
+header{
+    height: 180px;
+    
+    background: linear-gradient( red,gray);
+    color: white;
+}
+h1{
+    margin: 0;
+    padding: 25px;
+}
+.field{
+    margin: 8px 16px;
+}
+.field>input,
+.field select,
+.field textarea{
+    padding: 6px;
+    border-radius: 6px;
+    border: 2px solid black;
+    width: 200px;
+    box-sizing: content-box;
+}
+textarea{
+    height: 100px;
+    width: 200px;
+}
+p{margin-top: 50px;
+    font-size: 35px;
+    text-align: center;
+    font-weight: 600;
+    text-decoration-line: underline;
+}
+
+.pizza{
+    padding-bottom: 400px;
+    width:300px;
+}

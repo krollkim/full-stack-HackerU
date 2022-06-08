@@ -1,0 +1,20 @@
+.title{
+     background-image: linear-gradient(deeppink, skyblue );
+    margin: 0;
+    text-align: center;    
+}
+.item{
+    
+     display: inline-block;
+     padding: 15px;
+     background-color: rgb(90, 88, 88);
+     color: white;
+     border: 2px solid black;
+}
+.item:hover{
+    background-color: aqua;
+    color: red;
+}
+#navbar{
+    text-align: center;
+}

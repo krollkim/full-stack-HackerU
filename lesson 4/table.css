@@ -1,0 +1,31 @@
+body{
+text-align: center;
+}
+
+table{
+  
+    width: 100%; border-collapse: collapse ; 
+}
+
+th,
+td{
+    height: 30px;
+    border: 2px solid black;
+   
+}
+tr td:first-child,
+tr td:last-child{
+    background-color: grey;
+}
+td:nth-child(3){
+    background-color: aqua;
+}
+td:nth-child(5){
+    background-color: aqua;
+}
+
+a{
+    font-size: 35px;
+    background-color: aqua;
+    color: blueviolet;
+}

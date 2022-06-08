@@ -1,0 +1,178 @@
+body{
+    text-align: center;
+    margin: 10px;
+}
+.outbox1{
+    background-color: blueviolet;
+    width: 300px;
+    height: 200px;
+    position: relative;
+    display: inline-block;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+#inbox1{
+    background-color: aqua;
+    width: 60px;
+    height: 40px;
+    position: absolute;
+
+}
+#inbox2{
+    background-color: aqua;
+    width: 60px;
+    height: 40px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+}
+#inbox3{
+    background-color: aqua;
+    width: 60px;
+    height: 40px;
+    position: absolute;
+    right: 0;
+
+}
+#inbox4{
+    background-color: aqua;
+    width: 60px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+}
+#inbox5{
+    background-color: aqua;
+    width: 60px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+#inbox6{
+    background-color: aqua;
+    width: 60px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: 0;
+}
+#inbox7{
+    background-color: aqua;
+    width: 60px;
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+#inbox8{
+    background-color: aqua;
+    width: 60px;
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+#inbox9{
+    background-color: aqua;
+    width: 60px;
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+
+.yellowdiv{
+    background-color: yellow;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+.greendiv{
+    background-color: green;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+.bluediv{
+    background-color: rgb(70, 95, 204);
+    padding: 20px;
+    margin-bottom: 30px;
+}
+.purplediv{
+    background-color: purple;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+.pinkdiv{
+    background-color: deeppink;
+}
+.reddiv{
+    background-color: red;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+.orangediv{
+    background-color: orange;
+}
+
+.bg2{
+    background-color:  rgb(3, 61, 61);
+}
+
+#bg{
+    background-color: aqua;
+    height: 700px;
+    margin: 0 150px;
+}
+h1{
+    background-color: rgb(101, 128, 204);
+    margin: 0 150px;
+    
+}
+.item{
+    float: right;
+    padding: 15px;
+    background-color: rgb(222, 228, 226);
+    position: relative;
+   
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+td{
+    border: 2px solid black;
+    padding: 20px;
+}
+.col1{
+    background-color: rgb(190, 179, 179);
+    border: 0px;
+}
+.row1{
+    background-color: rgb(95, 89, 89);
+    color: white;
+}
+.row2{
+    background-color: rgb(190, 179, 179);
+}
+.row3{
+    background-color: rgb(190, 179, 179);
+    font-style: bold;
+}
+#aaa{
+    font-size: 30px;
+    background-color: aqua;
+}

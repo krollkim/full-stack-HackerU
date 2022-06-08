@@ -1,0 +1,96 @@
+body {
+    background-color: rgb(225, 158, 64);
+    margin: 0px;
+     text-align: center;
+  }
+  
+  
+  header {
+    background-color: rgb(255, 66, 8);
+    color: white;
+    height: 100px;
+    font-size: 35px;
+  }
+  h1 {
+    margin: 0;
+    padding: 6px 8px;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+  }
+    #frame{
+    width: 500px;
+    height: 350px;
+    background-color: rgb(250, 151, 238);
+    box-shadow: 2px 2px 2px 2px;
+    margin: 50px auto;
+    box-shadow: 0px 0px 40px black;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    }
+    #sideBar img{
+
+      width: 100%;
+    }
+    #sideBar{
+      width: 150px;
+      position: absolute;
+    }
+    #sideBar:hover{
+      border: 2px solid red;
+    }
+    
+  .btn{
+    position: absolute;
+    top: 50px;
+    bottom: 0;
+    margin: auto;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 10px;
+    font-size: 25px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.297);
+    color: white;
+    display: none;
+    cursor: pointer;
+  }
+  
+  #frame:hover .btn{
+      display: block;
+    }
+
+  .left{
+    left: 0;
+  }
+  .right{
+    right: 0;
+  }
+  
+  .card {
+    margin: auto;
+    text-align: center;
+    border-bottom: 1px solid;
+  } 
+  
+  p {
+    font-weight: bold;
+    background-color: rgb(183, 87, 176);
+    border-radius: 5px;
+  }
+  
+  #output, #output2, #output3{
+    font-size: 30px;
+    background-color: rgb(92, 158, 158);
+    color: blueviolet;
+    text-align: center;
+    margin: auto;
+  }
+  #gallery{
+    width: 500px;
+    margin: auto;
+  }
+  #gallery img{
+    width: 100%; 
+    display: none;
+  }
