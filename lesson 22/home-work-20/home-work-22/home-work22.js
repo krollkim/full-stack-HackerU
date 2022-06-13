@@ -95,18 +95,68 @@ let res = vegetables[0];
 
 const count = [1, "one", 2, "two", 3, "three"];
 
-let res = count.every(trueOrFalse);
-
-function trueOrFalse(elem){
+function trueOrFalse(arr){
    
+const res = arr[0];
 
-    if(elem === 0){
-            return true; 
-        }
-        else{
-            return false;
-        
+for(const count of arr){
+    if(count !== res){
+     
+        return false;
     }
 }
-    
-   
+ return true;
+
+
+}
+    // 6
+function getBetween(num1, num2) {
+    const numbers = [];
+
+    for (let i = num1 + 1; i < num2; i++) {
+        numbers.push(i);
+    }
+
+    return numbers;
+}
+
+// 7
+
+function getRandom(arr) {
+    const rand = Math.floor(Math.random() * arr.length);
+
+    return arr[rand];
+}
+
+//  8
+
+function getFirstAndLast(arr) {
+    return [arr[0], arr[arr.length - 1]];
+}
+
+//  9
+
+function upper(strings) {
+    const result = [];
+
+    for (const text of strings) {
+        const first = text[0].toUpperCase();
+        result.push(first + text.slice(1));
+    }
+
+    return result;
+}
+
+// 10
+
+function getMaZeMeshane(strings, minLength = 6) {
+    const result = [];
+
+    for (const text of strings) {
+        if (text.length > minLength) {
+            result.push(text);
+        }
+    }
+
+    return result;
+}
