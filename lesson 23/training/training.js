@@ -62,3 +62,53 @@ while(arr2 <= Number(arr1)){
      
 //     }console.log(arr1)
 // }
+
+
+// triangle length
+
+let a = 5;
+let b = 6;
+let c = 7;
+
+let s = (a + b + c) / 2;
+
+const area = Math.sqrt(s * ((s-a) * (s-b) * (s-c)));
+console.log(area)
+
+// random integer between 1 to 10
+
+function integer(){
+    const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+    let rand = Math.round(Math.random() * arr.length);
+    // can do as well with - const num = Math.ceil(Math.random() * 10);
+    let num = document.querySelector("#num").value;
+    
+    if(num == rand){
+        document.querySelector("#output3").innerHTML = "Good Work";
+    }
+    else{
+        document.querySelector("#output3").innerHTML = "Not matched, the number was - " + rand;
+    }
+
+    console.log(rand)
+}
+
+// calculate multiplication and division of two numbers
+
+function calcMul(){
+let num3 = document.querySelector("#num3").value;
+let num4 = document.querySelector("#num4").value;
+
+let res = Math.floor(num3 * num4);
+document.querySelector("#output4").innerHTML = "~ " + res + " ~";
+
+}
+
+function calcDiv(){
+let num3 = document.querySelector("#num3").value;
+let num4 = document.querySelector("#num4").value;
+
+let res = Math.floor(num3 / num4) ;
+document.querySelector("#output4").innerHTML = "~ " + res + " ~";
+}
