@@ -112,3 +112,70 @@ let num4 = document.querySelector("#num4").value;
 let res = Math.floor(num3 / num4) ;
 document.querySelector("#output4").innerHTML = "~ " + res + " ~";
 }
+
+// check if positive  or negative
+
+function checkNum(){
+    let num5 = document.getElementById("inp1").value;
+    let num6 = document.getElementById("inp2").value;
+
+    // if(num5 > 0){
+    //   document.getElementById("output5").innerHTML = num5 +"the number is positive"; 
+    // }
+    // else if(num5 < 0){
+    //     document.getElementById("output5").innerHTML = num5 +   "the number is negative";
+    // }
+    // else if(num6 > 0){
+    //     document.getElementById("output5").innerHTML = num6 +"the number is positive"; 
+    // }
+    //   else{
+    //       document.getElementById("output5").innerHTML = num6 +  "the number is negative";
+    //   }
+  
+
+    switch(num5){
+        case 1: return num5 +"the number is positive";
+        case 2: return num5 +"the number is positive";
+        case 3: return num5 +"the number is positive";
+        case 4: return num5 +"the number is positive";
+        case 5: return num5 +"the number is positive";
+        case 6: return num5 +"the number is positive";
+        case 7: return num5 +"the number is positive";
+        case 8: return num5 +"the number is positive";
+        case 9: return num5 +"the number is positive";
+        case 10: return num5 +"the number is positive";
+        case -1: return num5 + "the number is negative";
+        case -2: return num5 + "the number is negative";
+        case -3: return num5 + "the number is negative";
+        case -4: return num5 + "the number is negative";
+        case -5: return num5 + "the number is negative";
+        case -6: return num5 + "the number is negative";
+        case -7: return num5 + "the number is negative";
+        case -8: return num5 + "the number is negative";
+        case -9: return num5 + "the number is negative";
+        case -10: return num5 + "the number is negative";
+    }
+    switch(num6){
+        case 1: return num6 +"the number is positive";
+        case 2: return num6 +"the number is positive";
+        case 3: return num6 +"the number is positive";
+        case 4: return num6 +"the number is positive";
+        case 5: return num6 +"the number is positive";
+        case 6: return num6 +"the number is positive";
+        case 7: return num6 +"the number is positive";
+        case 8: return num6 +"the number is positive";
+        case 9: return num6 +"the number is positive";
+        case 10: return num6 +"the number is positive";
+        case -1: return num6 + "the number is negative";
+        case -2: return num6 + "the number is negative";
+        case -3: return num6 + "the number is negative";
+        case -4: return num6 + "the number is negative";
+        case -5: return num6 + "the number is negative";
+        case -6: return num6 + "the number is negative";
+        case -7: return num6 + "the number is negative";
+        case -8: return num6 + "the number is negative";
+        case -9: return num6 + "the number is negative";
+        case -10: return num6 + "the number is negative";
+    }
+   document.getElementById("num5" && "num6").innerHTML =
+}
