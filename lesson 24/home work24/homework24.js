@@ -82,35 +82,30 @@ function changeTxt(){
 
 // 7
 
-// let date = new Date();
+function dates(date1,date2){
+
+let dateX = new Date(date1);
+let dateY = new Date(date2);
+let res = [];
+
+let d1 = dateX.getDate();
+let m1 = dateX.getMonth() +1;
+let y1 = dateX.getFullYear();
+let d2 = dateY.getDate();
+let m2 = dateY.getMonth() +1;
+let y2 = dateY.getFullYear();
 
 
-// let m = date.getMonth()
-// let d = date.getDay
-// let y = date.getDate()
-// for()
-
-// function dates(){
 
 
-    
-//     var date = new Date();
-//     let y = date.getFullYear();
-//     let m = date.getMonth(10);
-//     let d = date.getDate(7);
-//     let day = date.getDay(3)
-    
-    
-   
-//     }
+for(let i = d1 + 1; i < d2; i++){
+let masheu = i.toString() + "," + m1 + "," + y1
+ res.push(masheu + " ");
+ 
 
-//     let date1 = "10/05/22";
-//     let date2 = "10/05/23";
+}
+document.getElementById("date").innerHTML = res;
 
-//     let res = ""
-
-//     for(date1; date1 < date2; date1++){
-//         document.getElementById(res) = date1 + date2;
-//     }console.log(res)
-
+console.log(res)
+}
 

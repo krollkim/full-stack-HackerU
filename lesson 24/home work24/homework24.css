@@ -90,3 +90,12 @@ background-color: hsl(180, 100%, 50%);
   position: absolute;
   overflow: hidden;
 }
+#date{
+  width: 100px;
+  height: 100px;
+  background-color: rgb(44, 3, 40);
+  color: white;
+  padding-top: 15px;
+  border: 2px dashed white;
+  margin: auto;
+}
