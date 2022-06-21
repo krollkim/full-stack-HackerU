@@ -9,7 +9,7 @@
     <script src="homework24.js" defer></script>
     <title>home-work-24</title>
  </head>
- <body>
+ <body onload="createBoard()">
     <div id="frame">
       <header>
          <h1 id="header">home-work-24</h1>
@@ -19,14 +19,66 @@
     <!-- 11 .יש ליצור לחצן שבלחיצה אחת הוא עם מצב "מופעל" ובלחיצה הבאה הוא "כבוי". יש לשנות 
 עיצוב בהתאם. -->
      <div class="card">
+      <p>11 .יש ליצור לחצן שבלחיצה אחת הוא עם מצב "מופעל" ובלחיצה הבאה הוא "כבוי". יש לשנות 
+         עיצוב בהתאם.</p>
      <button id="btn1"  onclick="changeBtn()">on</button>
          <p id="output1"></p>
      </div>
+
+     <br><br>
+     <!-- 2 .יש ליצור תמונה שכל פעם שהעכבר עובר עליה היא גדלה יותר -->
      <div class="card">
-    
+    <p>2 .יש ליצור תמונה שכל פעם שהעכבר עובר עליה היא גדלה יותר</p>
+      <img  id="img3" src="images/img (5).jpg" alt="" width="100"
+      onmouseover="makeBig()">
      </div>
 
-    
+     <br><br><br>
+     <!-- 3 .יש ליצור ב-JS טבלה שמתמלאת באותיות באופן רנדומלי. -->
+     <div class="card">
+
+      <p>3 .יש ליצור ב-JS טבלה שמתמלאת באותיות באופן רנדומלי.</p>
+      <table class="lettersTable">
+
+      </table>
+
+     </div>
+
+     <!-- 4 .יש ליצור אלמנט שזז לכל מקום לפי העכבר. -->
+     <div class="card">
+
+      <p>4 .יש ליצור אלמנט שזז לכל מקום לפי העכבר.</p>
+         <div id="circleM" onmousemove="circleMove(event)"></div>
+     </div>
+
+     <br><br><br>
+     <!-- 5 .יש ליצור אלמנט המחליף צבע כל הזמן -->
+     <div class="card">
+      <p>5 .יש ליצור אלמנט המחליף צבע כל הזמן</p>
+      <div onclick="colChange()" class="colChange">
+
+      </div>
+     </div>
+
+     <br><br><br>
+     <!-- 6 .יש ליצור 2 תיבות קלט שבלחיצה על כפתור התוכן שלהם מתחלף -->
+     <div class="card">
+      <p>6 .יש ליצור 2 תיבות קלט שבלחיצה על כפתור התוכן שלהם מתחלף </p>
+      <input type="text" id="txt1">
+      <input type="text" id="txt2">
+
+      <br>
+      <button onclick="changeTxt()">click</button>
+
+      <br><br><br>
+     </div>
+
+     <!--7 .יש לקלוט 2 תאריכים ולהציג את כל התאריכים שבניהם כולל אותם-->
+     <div class="card">
+      <p>7 .יש לקלוט 2 תאריכים ולהציג את כל התאריכים שבניהם כולל אותם</p>
+     </div>
+
+     <br><br><br><br><br>
     </div>
  </body>
  </html>

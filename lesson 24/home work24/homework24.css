@@ -32,36 +32,9 @@ body {
     margin: auto;
     text-align: center;
     border-bottom: 1px solid;
-    display: inline-block;
+    
   } 
-  .card1 {
-    margin: auto;
-    border-bottom: 1px solid;
-  } 
-  .card2{
-    width: 80%;
-    margin: auto;
-    border: 2px solid black;
-    border-radius: 8px;
-    background-image: url(../images/bg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    text-shadow: 2px 2px 2px white;
-    font-weight: bold;
-    font-style: oblique;
-  }
-  .card3{
-    background: none;
-  }
-  #submit{
-    width: 50%;
-    margin: auto;
-    background-color: black;
-    color: white;
-    text-shadow: 0px 0px 5px white;
-    font-weight: bold;
-    font-style: oblique;
-  }
+ 
   p {
     font-weight: bold;
     background-color: rgb(183, 87, 176);
@@ -85,31 +58,35 @@ body {
     color: white;
     border-radius: 8px;
   }
-  .tables{
-    background-image: url(../images/windows-g39e279691_1920.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    text-shadow: none;
-    border: none;
-  }
-  .tables tr{
-    border: 1px solid white;
-  }
-  .tables2{
-    color: white;
-    text-shadow: 2px 2px 2px black;
-    margin-bottom: 0;
-    
-  }
-  table td{
-    height: 80px;
-  }
-  tbody td:hover{
-    border: 1px solid rgb(0, 255, 238);
-    }
-  
-  table{
-    margin-bottom: 0px;
-  }
- 
- 
+
+
+ table{
+  border: 3px solid black;
+  margin: auto;
+  border-collapse: collapse;
+  width: 100%;
+}
+td{
+  height: 50px;
+  width: 100px;
+  border: 2px solid;
+}
+#circleM{
+  width: 100px;
+  height: 100px;
+  background-color: blueviolet;
+  border-radius: 50%;
+  border-radius: 50%;
+  position: absolute;margin: auto;
+}
+.colChange{
+  border: 2px dashed red;
+  height: 100px;
+  width: 100px;
+margin: auto;
+background-color: hsl(180, 100%, 50%);
+}
+.img3{
+  position: absolute;
+  overflow: hidden;
+}
