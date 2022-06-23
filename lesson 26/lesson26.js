@@ -10,17 +10,22 @@ function Table(elemId, structure, data) {
 
     // *********** יצירת כותרות הטבלה ************ //
     html += "<tr>";
-
+    html += `<th>#</th>`;
     for (const s of structure) {
         html += `<th>${s.title}</th>`;
+        
     }
 
     html += "</tr>";
     // ******************************************** //
 
     // *********** יצירת תוכן הטבלה ************ //
+
+    let i = 1;
+
     for (const d of data) {
         html += "<tr>";
+        html += `<td>${i++}</td>`;
 
         for (const s of structure) {
             html += `<td>${d[s.key]}</td>`;
@@ -29,6 +34,16 @@ function Table(elemId, structure, data) {
         html += "</tr>";
     }
     // ******************************************** //
+
+     // *********** יצירת שורה תחתונה ************ //
+     html += "<tr>";
+     html += `<td><button class="btn btn-success">+</button></td>`;
+
+     for (const s of structure) {
+         html += `<td><input type="text" id="${s.key}" class="form-control" placeholder="${s.title}"></td>`;
+     }
+ 
+     html += "</tr>";
 
     html += "</table>";
 
@@ -45,10 +60,10 @@ const clientStruc = [
 
 new Table("output1", clientStruc, clients);
 
-// const subjectStruc = [
-//     { key: 'id', title: 'מזהה' },
-//     { key: 'code', title: 'קוד מקצוע' },
-//     { key: 'title', title: 'שם המקצוע' },
-// ];
+const subjectStruc = [
+    { key: 'id', title: 'מזהה' },
+    { key: 'code', title: 'קוד מקצוע' },
+    { key: 'title', title: 'שם המקצוע' },
+];
 
-// new Table("output2", subjectStruc, subjects);
+new Table("output2", subjectStruc, subjects);
