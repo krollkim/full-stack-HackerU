@@ -91,6 +91,7 @@ let res = [];
 let d1 = dateX.getDate();
 let m1 = dateX.getMonth() +1;
 let y1 = dateX.getFullYear();
+
 let d2 = dateY.getDate();
 let m2 = dateY.getMonth() +1;
 let y2 = dateY.getFullYear();

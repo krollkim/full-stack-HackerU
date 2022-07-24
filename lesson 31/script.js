@@ -1,5 +1,5 @@
 
-const shoppingCart = [];
+let shoppingCart = [];
 
 function showProducts() {
     let html = "";
@@ -16,17 +16,25 @@ function showProducts() {
     }
 
     document.querySelector("#products").innerHTML = html;
+
+    if(localStorage.cart){
+        shoppingCart = JSON.parse(localStorage.cart);
+        updateCartCount();
+    }
 }
+
 
 function addProduct(id) {
     shoppingCart.push(id);
+    localStorage.cart = JSON.stringify(shoppingCart);
     updateCartCount();
     
 }
 
 function updateCartCount() {
     document.querySelector("#cart span").innerHTML = shoppingCart.length;
-
+    localStorage.cart = JSON.stringify(shoppingCart);
+    updateCartCount();
 }
 
 function showCart() { 
@@ -63,28 +71,6 @@ function showCart() {
 
 
 }
-
-// let total = 0;
-//    $("#items").on('click', ".item", function() {        
-//         $(this).appendTo("#basket");
-//         getTotal()
-//    });
-//     $("#basket").on('click', ".item", function() {      
-//       $(this).appendTo("#items");   
-//       getTotal()
-//    });
-
-
-//   function getTotal(){
-//      total = 0;
-//      $("#basket").find('.price').each(function(i){
-//         total += parseInt($(this).text().slice(0,-1));
-//         if(i + 1 === $("#basket").find('.item').length){
-//          $('.total_price').text(total+'$');
-//        } 
-//      });
-//    }
-
 
 showProducts();
 

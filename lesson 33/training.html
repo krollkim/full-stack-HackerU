@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Java Script - תרגול</title>
+    <link rel="stylesheet" href="training.css">
+    <script src="training.js" defer></script>
+</head>
+
+<body>
+    <div id="frame">
+        <header>
+            <h1>תרגול - JavaScript</h1>
+        </header>
+
+        <div class="card" id="c1">
+            <p>יש לקלוט מספר ולבדוק האם הוא זוגי</p>
+            <input type="number">
+            <button onclick="isEven()">הצג</button>
+            <p class="output"></p>
+        </div>
+        <div class="card" id="c2">
+            <p>יש לקלוט מספר ולבדוק האם הוא ראשוני</p>
+            <input type="number">
+            <button onclick="isPrime()">הצג</button>
+            <p class="output"></p>
+        </div>
+        <div class="card" id="c3">
+            <p>יש לקלוט מספר ולבדוק האם הוא לא ראשוני</p>
+            <input type="number">
+            <button onclick="isBelowPrime()">הצג</button>
+            <p class="output"></p>
+        </div>
+        <div class="card" id="c4">
+            <p>יש לקלוט 2 ערכים, ובלחיצת כפתור להחליף בינהם
+            </p>
+            <input id="inp1" type="number">
+            <input id="inp2" type="number">
+            <br>
+            <button onclick="switchInput()">הצג</button>
+            <p class="output"></p>
+        </div>
+        <div class="card" id="c6">
+            <h2 dir="ltr"><b>var numbers = [8,5,6,8,9,7,8,10,13,15,8,65,54,85,96,85,45,65];</b></h2>
+
+            <button onclick="showBig()">המספר הגדול</button>
+            <button onclick="showSmall()">המספר הקטן</button>
+            <button onclick="sum()">סכום</button>
+            <button onclick="avarage()">ממוצע</button>
+            <p class="output"></p>
+        </div>
+
+        <div class="card" id="c7">
+            <p>יש לקלוט מספר ולבדוק האם הוא ראשוני</p>
+            <input type="number">
+            <button onclick="isPrime2()">הצג</button>
+            <p class="output"></p>
+        </div>
+
+    </div>
+</body>
+
+</html>

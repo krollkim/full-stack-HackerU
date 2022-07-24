@@ -1,0 +1,28 @@
+
+body {
+    margin: auto;
+}
+
+form {
+    max-width: 500px;
+    margin: auto;
+    background-color: rgba(135, 207, 235, 0.729);
+    padding: 16px;
+    min-height: 500px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 32px;
+    background-color: rgba(236, 228, 120, 0.81);
+}
+
+input {
+    margin: auto;
+    margin-bottom: 16px;
+}
+.btn{
+    margin-top: 15px;
+   background-color: rgba(236, 228, 120, 0.81);
+   color: black;
+}
