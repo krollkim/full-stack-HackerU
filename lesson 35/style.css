@@ -1,0 +1,49 @@
+:root{
+    --dark: #1f2937;
+}
+body {
+    margin: auto;
+    background: var(--dark);
+    direction: rtl;
+}
+
+form {
+    max-width: 500px;
+    margin: 50px auto;
+    background-color: rgba(135, 207, 235, 0.729);
+    padding: 16px;
+    min-height: 500px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px red;
+
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 32px;
+    background-color: rgba(236, 228, 120, 0.81);
+    border-radius: 6px;
+}
+
+input {
+    margin: auto;
+    margin-bottom: 16px;
+}
+.btn{
+    margin-top: 15px;
+   background-color: rgba(236, 228, 120, 0.81);
+   color: black;
+}
+.error{
+    background-color: crimson;
+    min-height: 200px;
+    box-shadow: 0px 0px 5px black;
+}
+.sucsses{
+    background-color: #7dde6a;
+    min-height: 200px;
+    box-shadow: 0px 0px 5px white;
+}
+.h1_php{
+    margin: 100px auto;
+}
