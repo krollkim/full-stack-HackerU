@@ -8,19 +8,17 @@
     <script src="script.js" defer></script>
 </head>
 
-<body>
-    <div class="frame">
+<body onload="getData()">
+    <div id="frame">
         <header>
             <h1>Ajax</h1>
         </header>
 
-        <button id="btn" onclick="getData()" >click</button>
-        <input type="number" id="limit" placeholder="max amount">
-        <ol id="output"></ol>
+        <button onclick="getData()">רענן</button>
 
+        <div class="loader"></div>
 
-
-        <button onclick="getApi()">click</button>
+        <div id="output"></div>
     </div>
 </body>
 
