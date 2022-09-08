@@ -1,0 +1,59 @@
+:root{
+    --dark: #1f2937;
+}
+body {
+    margin: auto;
+    background: var(--dark);
+    direction: rtl;
+}
+
+#frame{
+    width: 50%;
+    min-height: 800px;
+    background-color: rgba(57, 242, 255, 0.654);
+    box-shadow: 2px 2px 2px 2px;
+    margin: 50px auto;
+    box-shadow: 0px 0px 40px black;
+    border-radius: 8px;
+    }
+  
+
+h1 {
+    text-align: center;
+    margin-bottom: 32px;
+    background-color: rgb(220, 120, 245);
+    border-radius: 6px;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+tr{
+    border-bottom: 1px solid gray;
+}
+td,
+th{
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+}
+#delete{
+    color:  red;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid black;
+    transition: 0.6s;
+}
+#delete:hover{
+    transform: rotate(360deg) scale(1.1);
+    transition: 0.6s;
+}
+#delete:active{
+    transform: scale(1.8);
+    transition: 0.6s;
+}
+.img{
+    display: block;
+    width: 300px;
+}

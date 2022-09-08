@@ -32,10 +32,7 @@ h1 {
     min-width: 200px;
     max-height: 200px;
     min-height: 200px;
-    /* float: right; */
     float: right;
-
-    
     margin: 30px ;
 }
 .imgs{

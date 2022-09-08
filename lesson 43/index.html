@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+    <title>acorrdion</title>
+</head>
+<body onmousedown="event.preventDefault()">
+    
+    <div class="frame">
+
+        <header>
+            <h1>acorrdion</h1>
+        </header>
+        
+        
+    <template>
+        <div class="card c1">
+
+                <header id="toggle"></header>
+                <button>X</button>
+            <div class="content">
+                    <h3>client information</h3>
+
+                <p id="fullName"><b>client name:</b><p>
+                <p id="personId"><b>client id:</b></p>
+                <p id="email"><b>client email:</b></p>
+                <p id="phone"><b>client phone:</b></p>
+            </div>
+        </div>
+    </template>
+    </div>
+</body>
+</html>

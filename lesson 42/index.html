@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+    <title>memory game</title>
+</head>
+<body>
+<div class="frame">
+    <div>
+        <h1 class="label">memory game</h1>
+    </div>
+
+    <button onclick="newGame()" class="Game">new game</button>
+    <div class="players">
+        <div id="point1">
+            <h3>player one</h3>
+            <p></p></div>
+        <div id="point2">
+            <h3>player two</h3>
+            <p></p></div>
+    </div>
+
+    <div class="board">
+        <template>
+            <div class="imgFrame"></div>
+        </template>
+    </div>
+
+    <div id="snackbar"></div>
+</div>
+</body>
+</html>

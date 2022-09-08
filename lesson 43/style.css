@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&family=Secular+One&display=swap');
+body {
+
+    font-family: 'Secular One', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 8px;
+}
+.frame{
+    width: 65%;
+    min-height: 800px;
+    background-color: rgba(72, 132, 244, 0.654);
+    box-shadow: 2px 2px 2px 2px;
+    margin: 50px auto;
+    box-shadow: 0px 0px 40px black;
+    border-radius: 8px;
+}
+header {
+    background-color: blueviolet;
+    padding: 20px;
+    color: white;
+}
+
+h1 {
+    background-color: rgba(220, 120, 236, 0.81);
+    margin: 0;
+    font-family: 'Rubik Wet Paint', cursive;
+    font-size: 70px;
+    text-align: center;
+}
+
+.card button {
+    background: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border: 0;
+    padding: 14px;
+    color: crimson;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.card button:hover {
+    background-color: crimson;
+    color: white;
+    transition: 0.3s;
+}
+
+.card{
+    background-color: rgb(207, 207, 207);
+    margin: 12px;
+    border-radius: 12px;
+    box-shadow: 0 0 6px 0 #00000057;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+.card>header{
+    background-color: rgba(220, 120, 236, 0.81);
+    padding: 10px;
+    color: white;
+}
+.card .content{
+    display: none;
+    background-color: white;
+     padding: 0 30px 16px 30px;
+    border-top: 1px solid #c6c6c6;
+}
+#frame>header {
+    background-color: #00aba9;
+    padding: 20px;
+    color: white;
+}
+
+.card header {
+    padding: 14px;
+}

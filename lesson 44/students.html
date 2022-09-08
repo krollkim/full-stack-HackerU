@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="students.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="students.js" defer></script>
+   
+    <title>Document</title>
+</head>
+<body>
+    
+    <header><h1>students</h1></header>
+    
+<div>
+
+    
+        <div class="frame">
+            <select>
+                <option value="" disabled selected >choose class</option>
+            </select>
+    
+            <table>
+                <tr>
+                    <th>#</th>
+                    <th>שם התלמיד</th>
+                    <th>ת.ז.</th>
+                    <th>טלפון</th>
+                    <th>אימייל</th>
+                    <th>ציונים</th>
+                    <!-- עמודה לכפתור המחיקה -->
+                    <th></th>
+                </tr>
+                <template>
+                    <tr>
+                        <td id="numbering"></td>
+                        <td id="fullName"></td>
+                        <td id="personId"></td>
+                        <td id="phone"></td>
+                        <td id="email"></td>
+                        <td id="grades"></td>
+                        <td></td>
+                    </tr>
+                </template>
+
+                <tbody id="students"
+                ></tbody>
+            </table>
+        </div>
+    
+   
+
+</div>
+</body>
+</html>

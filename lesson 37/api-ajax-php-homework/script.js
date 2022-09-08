@@ -14,10 +14,11 @@ function createArticles(arr) {
             
         </div>
     </div>`
+   
+    }
+     document.querySelector("#output").innerHTML = html;
 }
-document.querySelector("#output").innerHTML = html;
 
-}
 function getData() {
     // בתחילת הפנייה לשרת, זה מציג את הסימון של הטעינה
     document.querySelector(".loader").style.display = "block";
