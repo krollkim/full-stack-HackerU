@@ -7,7 +7,7 @@ function createHtml(Response){
     let name = starWarsChar.name
     let image = "https://static.wikia.nocookie.net/starwars/images/7/7f/Jabba_SWSB.png"
 
-    const starWarsCard = document.createElement("div")
+   const starWarsCard = document.createElement("div")
 
     const genderParagraph = document.createElement("p")
     const nameParagraph = document.createElement("p")
