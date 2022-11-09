@@ -1,0 +1,28 @@
+<div class="frame">
+    <h2>contact form</h2>
+
+    <div class="field">
+        <label>full name</label>
+        <input type="text" [(ngModel)]="fullName">
+    </div>
+    <div class="field">
+        <label>phone</label>
+        <input type="text" [(ngModel)]="phone">
+    </div>
+    <div class="field">
+        <label>email</label>
+        <input type="text" [(ngModel)]="email">
+    </div>
+    <div class="field">
+        <label>content</label>
+        <textarea [(ngModel)]="content"></textarea>
+    </div>
+    <div class="field">
+        <label>satisfaction</label>
+        <app-range [(value)]="satisfaction"></app-range>
+    </div>
+    <div class="field">
+        <button (click)="send()">send content</button>
+    </div>
+
+</div>

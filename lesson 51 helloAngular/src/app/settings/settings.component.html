@@ -1,0 +1,9 @@
+<div class="frame">
+    <h2>settings</h2>
+
+    <div class="field">
+        <label>brightness:</label>
+        <app-range [(value)]="brightness" [min]="0" [max]="100" 
+        (valueChange)="brightnessChange()"></app-range>
+    </div>
+</div>

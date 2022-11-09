@@ -1,0 +1,28 @@
+nav {
+    background: rgba(0, 128, 128, 0.788);
+    color: white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+a {
+    padding: 16px;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    margin-left: 15%;
+}
+p{
+    text-align: center;
+}
+a.active {
+    background-color: #d876f69a;
+}
+
+a:hover {
+    background-color: #d876f66b;
+}
