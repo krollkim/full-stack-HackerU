@@ -1,8 +1,11 @@
+
 export interface User {
     id: number;
     firstName: string;
     lastName: string;
+    phone: string;
+    email: string;
     birthday?: string;
-    email?: string;
-    isActive: boolean;
+    isBlocked: boolean;
+    isActive?: boolean;
 }

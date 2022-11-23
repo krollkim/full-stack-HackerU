@@ -10,6 +10,9 @@ body{
  background-color: rgb(179, 97, 255);
 
 }
+h1{
+    text-align: center;
+}
 h2 {
     text-align: center;
     color: teal;

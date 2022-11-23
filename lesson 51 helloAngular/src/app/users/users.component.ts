@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { UtilityService } from '../utility.service';
+import { users } from './users.data';
 import { User } from './users.interface';
+// import { User } from './users.interface';
 
 @Component({
   selector: 'app-users',
@@ -7,16 +10,21 @@ import { User } from './users.interface';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
-  user: User = {
-    id: 5,
-    firstName: 'John',
-    lastName: 'Doe',
-    email: 'john@doe.com',
-    isActive: true,
-  }
+  users = users;
+  user = 'users';
+  searchVal: string;
 
+  // remove(i: number){
+  //   this.users.splice(i,1);
+  // }
+  remove(user: User) {
+    const i = this.users.findIndex(x => x.id == user.id);
+    this.users.splice(i, 1);
+}
 
-  constructor() { }
+  constructor(utility: UtilityService) {
+    
+   }
 
   ngOnInit(): void {
   }

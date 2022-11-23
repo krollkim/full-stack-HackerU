@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ListComponent implements OnInit {
   product: string;
 
+  listTitle = 'list';
   list: string[] = [
     "מלפפון",
     "עגבניה",
@@ -16,19 +17,29 @@ export class ListComponent implements OnInit {
     "כוסברה",
 ];
 
+
 addProduct() {
     this.list.push(this.product);
     this.product = "";
+    localStorage["list"] = JSON.stringify(this.list);
+    
 }
 
 removeItem(i: number) {
     this.list.splice(i, 1);
+
+    localStorage["list"] = JSON.stringify(this.list);
 }
 
   
   constructor() { }
 
   ngOnInit(): void {
-  }
+   if(localStorage['list'])
+    
+   this.list = JSON.parse(localStorage['list']);
 
+
+    console.log(localStorage["list"] = JSON.stringify(this.list));
+  }
 }

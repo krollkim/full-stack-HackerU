@@ -1,7 +1,3 @@
 <nav>
-    <a>home</a>
-    <a routerLink="users">users</a>
-    <a routerLink="list">list</a>
-    <a routerLink="contact">contact info</a>
-    <a routerLink="settings">settings</a>
+    <a *ngFor="let item of menu"[routerLink]="item.route" [class.navActive]="active == item.route">{{ item.title }}</a>
 </nav>

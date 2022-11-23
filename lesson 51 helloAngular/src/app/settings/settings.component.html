@@ -1,9 +1,14 @@
-<div class="frame">
-    <h2>settings</h2>
 
-    <div class="field">
-        <label>brightness:</label>
-        <app-range [(value)]="brightness" [min]="0" [max]="100" 
-        (valueChange)="brightnessChange()"></app-range>
-    </div>
+<div class="frame">
+    <h2>{{ setting }}</h2>
+
+<div class="btn">
+    <button (click)="reset()">reset</button>
+</div>
+    
+    <div class="frame" *ngFor="let s of settings">
+        <label>{{ s.title }}</label>
+        <app-range [(value)]="s.value" [min]="s.min" [max]="s.max" (valueChange)="change(s)">
+    </app-range> 
+</div>
 </div>

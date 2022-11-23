@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UtilityService } from '../utility.service';
 
 @Component({
   selector: 'app-contact',
@@ -13,6 +14,7 @@ email: string;
 content: string;
 satisfaction: number | string;
 
+contact = 'contact';
 
 send() {
   console.log(`fullName: ${this.fullName}`);
@@ -21,9 +23,11 @@ send() {
   console.log(`content: ${this.content}`);
   console.log(`satisfaction: ${this.satisfaction}`);
   
+  this.utility.alert("טופס נשלח בהצלחה");
+
 }
 
-  constructor() { }
+  constructor(public utility: UtilityService) { }
 
   ngOnInit(): void {
   }
