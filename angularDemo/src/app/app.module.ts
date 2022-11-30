@@ -11,6 +11,7 @@ import { routes } from './routing';
 import { UsersComponent } from './users/users.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { FormsModule } from '@angular/forms';
+import { SquareCreatorComponent } from './square-creator/square-creator.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FormsModule } from '@angular/forms';
     NavBarComponent,
     HomeComponent,
     UsersComponent,
-    GalleryComponent
+    GalleryComponent,
+    SquareCreatorComponent
   ],
   imports: [
     BrowserModule,

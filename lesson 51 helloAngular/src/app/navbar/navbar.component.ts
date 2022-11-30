@@ -15,8 +15,9 @@ export class NavbarComponent implements OnInit {
     {route: '/users', title: 'users'},
     {route: '/list', title: 'list'},
     {route: '/contact', title: 'contact'},
-    {route: '/settings', title: 'settings'},
     {route: '/gallery', title: 'gallery'},
+    {route: '/clients', title: 'clients'},
+    {route: '/settings', title: 'settings'},
   ]
   constructor(router: Router) {
       router.events.subscribe(ev => {

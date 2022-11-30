@@ -1,0 +1,29 @@
+<h1>clients</h1>
+
+<table>
+    <thead>
+     <tr>
+        <th>#</th>
+        <th>firstName</th>
+        <th>lastName</th>
+        <th>phone</th>
+        <th>email</th>
+        <th>city</th>
+     </tr>
+       
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let c of clients; let i = index">
+            <td>{{  i + 1 }}</td>
+            <td>{{ c.firstName }}</td>
+            <td>{{ c.lastName }}</td>
+            <td>{{ c.phone }}</td>
+            <td>{{ c.email }}</td>
+            <td>{{ c.city }}</td>
+
+            <td><button (click)="remove(c.id)">x</button></td>
+        </tr>
+        
+    </tbody>
+</table>

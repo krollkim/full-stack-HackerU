@@ -19,6 +19,9 @@ import { UtilityService } from './utility.service';
 import { AlertComponent } from './alert/alert.component';
 import { FirstUpperPipe } from './first-upper.pipe';
 import { SearchPipe } from './search.pipe';
+import { SquareComponent } from './square/square.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ClientsComponent } from './clients/clients.component';
 
 @NgModule({
   declarations: [
@@ -35,13 +38,16 @@ import { SearchPipe } from './search.pipe';
     AlertComponent,
     FirstUpperPipe,
     SearchPipe,
+    SquareComponent,
+    ClientsComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    RouterModule.forRoot(routes)
-
+    RouterModule.forRoot(routes),
+    BrowserAnimationsModule,
+    
   ],
   providers: [UtilityService],
   bootstrap: [AppComponent],

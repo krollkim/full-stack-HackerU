@@ -1,7 +1,9 @@
 <h1>{{ title }}</h1>
 
-<img class="img" [src]="path + images[current]">
+<div class="frame">
+    <img class="img" [src]="images[current]">
 
-<br>
-<button (click)="prev()">prev</button>
-<button (click)="next()">next</button>
+    <br>
+    <button class="btn" (click)="prev()">prev</button>
+    <button class="btn" (click)="next()">next</button>
+</div>
