@@ -11,14 +11,18 @@ export class NavbarComponent implements OnInit {
   active: string;
 
   menu: Nav[] = [
-    {route: '/', title: 'Home'},
-    {route: '/users', title: 'users'},
-    {route: '/list', title: 'list'},
-    {route: '/contact', title: 'contact'},
-    {route: '/gallery', title: 'gallery'},
-    {route: '/clients', title: 'clients'},
-    {route: '/settings', title: 'settings'},
-  ]
+    { route: '/', title: 'home', icon: 'home' },
+    { route: '/users', title: 'users', icon: 'users' },
+    { route: '/list', title: 'lists', icon: 'list' },
+    { route: '/contact', title: 'contacts', icon: 'envelope' },
+    { route: '/settings', title: 'settings', icon: 'cog' },
+    { route: '/gallery', title: 'gallery', icon: 'camera' },
+    { route: '/clients', title: 'clients', icon: 'user' },
+    { route: '/clients-response', title: 'contact responses', icon: 'server' },
+    { route: '/tasks', title: 'check-list', icon: 'check-square-o' },
+
+];
+
   constructor(router: Router) {
       router.events.subscribe(ev => {
         if (ev instanceof NavigationStart) {

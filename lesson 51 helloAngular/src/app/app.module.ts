@@ -22,6 +22,8 @@ import { SearchPipe } from './search.pipe';
 import { SquareComponent } from './square/square.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ClientsComponent } from './clients/clients.component';
+import { ClientsResponseComponent } from './clients-response/clients-response.component';
+import { TasksComponent } from './tasks/tasks.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +42,8 @@ import { ClientsComponent } from './clients/clients.component';
     SearchPipe,
     SquareComponent,
     ClientsComponent,
+    ClientsResponseComponent,
+    TasksComponent,
   ],
   imports: [
     BrowserModule,

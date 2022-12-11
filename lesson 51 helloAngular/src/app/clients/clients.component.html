@@ -1,5 +1,6 @@
 <h1>clients</h1>
 
+<p *ngIf="!clients.length">no clients yet</p>
 <table>
     <thead>
      <tr>
@@ -7,20 +8,42 @@
         <th>firstName</th>
         <th>lastName</th>
         <th>phone</th>
+        <th>createTime</th>
         <th>email</th>
         <th>city</th>
+        <th>favorites</th>
+        <th></th>
      </tr>
        
     </thead>
 
     <tbody>
+        <tr>
+            <td></td>
+            <td><input type="text" [(ngModel)]="addedItem.firstName"></td>
+            <td><input type="text" [(ngModel)]="addedItem.lastName"></td>
+            <td><input type="text" [(ngModel)]="addedItem.email"></td>
+            <td></td>
+            <td><input type="text" [(ngModel)]="addedItem.phone"></td>
+            <td><input type="text" [(ngModel)]="addedItem.city"></td>
+            <td><button (click)="add()">add+</button></td>
+        </tr>
+        
+        
         <tr *ngFor="let c of clients; let i = index">
             <td>{{  i + 1 }}</td>
             <td>{{ c.firstName }}</td>
             <td>{{ c.lastName }}</td>
             <td>{{ c.phone }}</td>
+            <td>{{ c.createTime | date : 'dd/MM/yyyy' }}</td>
             <td>{{ c.email }}</td>
             <td>{{ c.city }}</td>
+
+            <td>
+                <i class="fa fa-star-o" *ngIf="!c.isFavorite" (click)="Favorite(c)"></i>
+                <i class="fa fa-star"  *ngIf="c.isFavorite" (click)="unFavorite(c)"></i>
+            </td>
+            
 
             <td><button (click)="remove(c.id)">x</button></td>
         </tr>

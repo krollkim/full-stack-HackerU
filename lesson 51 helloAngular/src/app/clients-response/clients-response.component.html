@@ -1,0 +1,38 @@
+<h1>contant response</h1>
+
+<!-- <p *ngIf="!Response.length">no clients yet</p> -->
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>fullName</th>
+      <th>createTime</th>
+      <th>phone</th>
+      <th>email</th>
+      <th>content</th>
+      <th>satisfaction</th>
+      <th>isCompleted</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let r of responses; let i = index" [class.completed]="r.isCompleted">
+      <td>{{ i + 1 }}</td>
+      <td>{{ r.fullName }}</td>
+      <td>{{ r.createTime | date: "dd/MM/yyyy" }}</td>
+      <td>{{ r.phone }}</td>
+      <td>{{ r.email }}</td>
+      <td>{{ r.content }}</td>
+      <td>{{ r.satisfaction }}</td>
+      <td>{{ r.isCompleted }}</td>
+
+      <td>
+        <button *ngIf="!r.isCompleted" (click)="complete(r)">סמן כטופל</button>
+        <button class="btn" *ngIf="r.isCompleted" (click)="undo(r)">בטל טיפול</button>
+      </td>
+      <td>
+        <button (click)="remove(r.id)">x</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

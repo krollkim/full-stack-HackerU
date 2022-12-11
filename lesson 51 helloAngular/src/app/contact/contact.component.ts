@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { UtilityService } from '../utility.service';
 
@@ -17,19 +18,24 @@ satisfaction: number | string;
 contact = 'contact';
 
 send() {
-  console.log(`fullName: ${this.fullName}`);
-  console.log(`phone: ${this.phone}`);
-  console.log(`email: ${this.email}`);
-  console.log(`content: ${this.content}`);
-  console.log(`satisfaction: ${this.satisfaction}`);
+  const obj = {
+      fullName: this.fullName,
+      phone: this.phone,
+      email: this.email,
+      content: this.content,
+      satisfaction: this.satisfaction,
+  };
+
+
   
-  this.utility.alert("טופס נשלח בהצלחה");
 
+  this.http.post<void>("http://localhost:3000/contact", obj).subscribe(()=> {
+    this.utility.alert("טופס נשלח בהצלחה");
+ });
 }
+ 
+  constructor(private utility: UtilityService, private http: HttpClient) { }
 
-  constructor(public utility: UtilityService) { }
-
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
 }
