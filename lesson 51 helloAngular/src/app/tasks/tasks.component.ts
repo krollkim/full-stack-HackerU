@@ -9,39 +9,71 @@ import { TaskStatuses, Structure, Task} from './tasks.interface';
 })
 export class TasksComponent implements OnInit {
   TaskStatuses = TaskStatuses;
+  tasks : Task [] = [];
+
+    addedItem: Task = {
+        id: 0,
+        task: "",
+        createTime : new Date,
+        status: TaskStatuses.open,
+        isDeleted: false,
+    };
+
   sections:  Structure[] = [
 
     {
       status: TaskStatuses.open,
-    title: 'Open-Tasks',
-    color: 'lightgreen',
-    cards: [],
+      title: 'Open-Tasks',
+      color: 'lightgreen',
+      cards: [],
     },
 
     {
       status: TaskStatuses.inProgress,
-    title: 'inProgress-Tasks',
-    color: 'lightblue',
-    cards: [],
+      title: 'inProgress-Tasks',
+      color: 'lightblue',
+      cards: [],
     },
 
     {
-    status: TaskStatuses.complete,
-    title: 'complete-Tasks',
-    color: 'lightcoral',
-    cards: [],
+      status: TaskStatuses.complete,
+      title: 'complete-Tasks',
+      color: 'lightcoral',
+      cards: [],
     }
   ];
 
+  // addTaskStat(item: Task, newStatus: TaskStatuses){
+  //   const sub = this.http.post<Task>(`http://localhost:3000/tasks/${item.id}/status/${newStatus}`, {}).subscribe(data => {
+  //     const struc = this.sections.find(x => x.status == newStatus);
+  //     item.status = newStatus;
+  //     struc?.cards.push(item);
+  
+  //     sub.unsubscribe();
+  //   });
+  // }
+
+  // addTask(item: Task){
+  //   this.addTaskStat(item, TaskStatuses.open);
+  // }
+
+  addTask() {
+    this.http.post<Task>("http://localhost:3000/tasks", this.addedItem).subscribe(newtask => {
+      this.tasks.push(newtask);
+    
+    });
+
+}
+
   changeStatus(s: Structure, item: Task, newStatus: TaskStatuses) {
-    const sub = this.http.put<void>(`http://localhost:3000/tasks/${item.id}/status/${newStatus}`, {}).subscribe(() => {
+   const sub = this.http.put<void>(`http://localhost:3000/tasks/${item.id}/status/${newStatus}`, {}).subscribe(() => {
    const i = s.cards.findIndex(x => x.id === item.id);
    s.cards.splice(i, 1);
     const struc = this.sections.find(x => x.status == newStatus);
     item.status = newStatus;
     struc?.cards.push(item);
 
-   sub.unsubscribe();
+    sub.unsubscribe();
     });
   }
 
@@ -62,6 +94,14 @@ export class TasksComponent implements OnInit {
     this.changeStatus(s, item, TaskStatuses.complete);
   }
 
+  clearTask(s: Structure, item: Task){
+   const sub = this.http.delete<void>(`http://localhost:3000/tasks/${item.id}`, {}).subscribe(() => {
+   const i = s.cards.findIndex(x => x.id === item.id);
+   s.cards.splice(i, 1);
+
+   sub.unsubscribe();
+    });
+  }
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
@@ -70,9 +110,9 @@ export class TasksComponent implements OnInit {
         const item = this.sections.find(s => s.status == task.status);
         item?.cards.push(task);
       })
-      sub.unsubscribe();
+      
+        sub.unsubscribe();
       
     })
   }
-
 }

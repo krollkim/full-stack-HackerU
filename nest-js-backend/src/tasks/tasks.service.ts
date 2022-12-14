@@ -6,8 +6,21 @@ import { Task, TaskStatuses } from "./tasks.entity";
 @Injectable()
 export class TasksService {
 
+
    async getTasks(){
         return await this.rep.find({where: {isDeleted: false}})
+    }
+
+    async addtask(task: Task){
+        task.id = null;
+        task.createTime = new Date();
+        task.status = TaskStatuses.open;
+
+        return await this.rep.save(task);
+    }
+
+    updateTask(Task: Task){
+        return this.rep.save(Task);
     }
 
     async statusChange(taskId: number, status: TaskStatuses){
@@ -18,6 +31,13 @@ export class TasksService {
             this.rep.save(item);
         }
     }
+
+    removeTask(id: number){
+        return this.rep.delete(id);
+    }
+
+   
+
     constructor(
         @InjectRepository(Task)
         private rep: Repository<Task>

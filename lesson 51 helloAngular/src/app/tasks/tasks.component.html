@@ -1,18 +1,36 @@
+
+    <div class="inputFrame">
+        <input type="text" [(ngModel)]="addedItem.task">
+        <button (click)="addTask()">add-task</button>
+    </div>
+
+
+
 <div class="frame">
-    <div class="column" *ngFor="let s of sections" >
+ <div class="column" *ngFor="let s of sections" >
         <h2>{{ s.title }}</h2>
     
+     <div class="cards" [style.background-color]="s.color">
 
-    <div class="cards" [style.background-color]="s.color">
         <div class="card" *ngFor="let item of s.cards">
+            
             <p>{{ item.task }}</p>
-            <button *ngIf="s.status > TaskStatuses.open" (click)="undo(s, item)" style="background: rgb(250, 142, 142);">previous<i class="fa fa-undo"></i></button>
-            <button *ngIf="s.status == TaskStatuses.open" (click)="prossing(s, item)" style="background: lightblue;"
-            >progressing <i class="fa fa-arrow-right"></i></button>
-            <button *ngIf="s.status == TaskStatuses.inProgress" (click)="complete(s, item)" style="background: rgb(143, 245, 143);"
-            >done <i class="fa fa-check"></i></button>
-            </div>
+
+                <button *ngIf="s.status > TaskStatuses.open" (click)="undo(s, item)" style="background: rgb(250, 142, 142);"> previous <i class="fa fa-undo"></i>
+                </button>
+
+                <button *ngIf="s.status == TaskStatuses.open" (click)="prossing(s, item)" style="background: lightblue;"> progressing <i class="fa fa-arrow-right"></i>
+                </button>
+
+                <button *ngIf="s.status == TaskStatuses.inProgress" (click)="complete(s, item)" style="background: rgb(143, 245, 143);"
+                > done <i class="fa fa-check"></i>
+                </button>
+                <button *ngIf=" s.status == TaskStatuses.open || s.status == TaskStatuses.inProgress || s.status == TaskStatuses.complete" (click)="clearTask(s, item)" style="background: rgb(214, 214, 214);"
+                > clear <i class="fa fa-close"></i>
+                </button>
         </div>
-    </div>
+    </div> 
+  </div>
 </div>
+
 
