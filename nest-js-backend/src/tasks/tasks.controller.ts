@@ -1,5 +1,5 @@
 import { Controller, Get, Put, Delete, Param, Post, ParseIntPipe, Body } from "@nestjs/common";
-import { Task, TaskStatuses } from "./tasks.entity";
+import { Task, TaskStatuses , LevelTypes} from "./tasks.entity";
 import { TasksService } from "./tasks.service";
 
 @Controller('tasks')
@@ -23,14 +23,17 @@ async statusChange(
     return this.taskService.statusChange(taskId, status);
 }
 
-@Put()
-async updateClient(@Body() item: Task){
-        return await this.taskService.updateTask(item);
+@Put(":taskId/UrLevel/:levelId")
+async changePriority(
+    @Param('taskId', new ParseIntPipe()) taskId: number,
+    @Param('levelId', new ParseIntPipe()) levelId: LevelTypes) {
+        
+    return this.taskService.changePriority(taskId, levelId);
 }
 
 @Delete(":id")
-async removeClient(@Param('id', new ParseIntPipe()) clientId: number) {
-    return await this.taskService.removeTask(clientId);
+async removeClient(@Param('id', new ParseIntPipe()) taskId: number) {
+    return this.taskService.removeTask(taskId);
 }
 
     constructor(private taskService: TasksService) { }

@@ -11,6 +11,10 @@ export class Task {
     @Column()
     task: string;
 
+    @Column({ type: 'int', default: 0 })
+    level: LevelTypes;
+
+
     @Column({ type: 'int' })
     status: TaskStatuses;
     
@@ -22,4 +26,11 @@ export enum TaskStatuses {
     open = 0,
     inProgress = 1,
     complete = 2,
+}
+
+export enum LevelTypes {
+    low = 0,
+    medium = 1,
+    high = 2,
+  
 }

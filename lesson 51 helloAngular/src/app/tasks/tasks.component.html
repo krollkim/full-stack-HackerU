@@ -1,18 +1,21 @@
 
-    <div class="inputFrame">
-        <input type="text" [(ngModel)]="addedItem.task">
-        <button (click)="addTask()">add-task</button>
-    </div>
+<div class="inputFrame">
+    <input placeholder="new task"  type="text" [(ngModel)]="newTask" (keyup.enter)="addTask()">
+</div>
+
+
 
 
 
 <div class="frame">
- <div class="column" *ngFor="let s of sections" >
+ <div class="column" *ngFor="let s of sections" (dragover)="dragover(s)" [class.drag]="s.isDrag">
         <h2>{{ s.title }}</h2>
     
      <div class="cards" [style.background-color]="s.color">
 
-        <div class="card" *ngFor="let item of s.cards">
+        <div class="card" *ngFor="let item of s.cards" (dragend)="dragend(s, item)" draggable="true">
+            <i class="fa fa-remove" (click)="clearTask(s, item)"></i>
+
             
             <p>{{ item.task }}</p>
 
@@ -25,9 +28,11 @@
                 <button *ngIf="s.status == TaskStatuses.inProgress" (click)="complete(s, item)" style="background: rgb(143, 245, 143);"
                 > done <i class="fa fa-check"></i>
                 </button>
-                <button *ngIf=" s.status == TaskStatuses.open || s.status == TaskStatuses.inProgress || s.status == TaskStatuses.complete" (click)="clearTask(s, item)" style="background: rgb(214, 214, 214);"
-                > clear <i class="fa fa-close"></i>
-                </button>
+
+                <select [(ngModel)]="item.UrLevel">
+                    <option *ngFor="let l of UrLevel" value="{{ l.level }}" (click)="TaskPriority(s, item)">{{ l.title }}</option>
+                </select>
+            
         </div>
     </div> 
   </div>
