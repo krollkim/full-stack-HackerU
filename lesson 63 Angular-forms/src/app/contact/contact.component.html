@@ -1,0 +1,39 @@
+<div class="frame">
+
+
+<div>
+    <h1>contact form</h1>
+</div>
+
+<p *ngIf="isSended">הטופס נשלח בהצלחה</p>
+
+<form [formGroup]="form" *ngIf="!isSended">
+    <div class="field">
+        <label>full name:</label>
+        <input class="w3-input w3-border w3-round
+" type="text" formControlName="fullName">
+    </div>
+    <div class="field">
+        <label>phone:</label>
+        <input class="w3-input w3-border w3-round
+" type="text" formControlName="phone">
+    </div>
+    <div class="field">
+        <label>email:</label>
+        <input class="w3-input w3-border w3-round
+" type="text" formControlName="email">
+    </div>
+    <div class="field">
+        <label>content:</label>
+        <textarea class="w3-input w3-border w3-round
+" formControlName="content" cols="30" rows="10">
+
+        </textarea>
+    </div>
+
+    <button (click)="send()" class="w3-btn w3-green w3-round" [disabled]="!form.valid"
+    >send form</button>
+    
+</form>
+
+</div>

@@ -1,0 +1,36 @@
+<h1>{{ title }}</h1>
+
+<table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>fullName</th>
+        <th>createTime</th>
+        <th>phone</th>
+        <th>email</th>
+        <th>content</th>
+        <th>isCompleted</th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      <tr *ngFor="let r of response; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ r.fullName }}</td>
+        <td>{{ r.createTime | date: "dd/MM/yyyy" }}</td>
+        <td>{{ r.phone }}</td>
+        <td>{{ r.email }}</td>
+        <td>{{ r.content }}</td>
+        <!-- <td>{{ r.isCompleted }}</td> -->
+  
+        <!-- <td>
+          <button *ngIf="!r.isCompleted" (click)="complete(r)">סמן כטופל</button>
+          <button class="btn" *ngIf="r.isCompleted" (click)="undo(r)">בטל טיפול</button>
+        </td> -->
+        <!-- <td>
+          <button (click)="remove(r.id)">x</button>
+        </td> -->
+      </tr>
+    </tbody>
+  </table>
+  
