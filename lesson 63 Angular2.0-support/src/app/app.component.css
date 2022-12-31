@@ -5,8 +5,11 @@ table{
     margin: auto;
 }
 th, td{
-    border: 1px solid ;
+    border: 1px solid white;
     padding: 16px;
+    color: white;
+    text-shadow: 0 0 8px black;
+    background-color: rgb(0, 0, 0);
 }
 tr:nth-child(even){
     background-color: rgba(162, 161, 161, 0.491);
@@ -21,4 +24,25 @@ h1, p{
     border:1px solid black;
     border-radius: 2px;
     background-color:rgb(78, 233, 78);
+}
+div>h1{
+    text-align: center;
+    margin-top: 20px;
+    text-shadow: 0 0 8px #800073c2;
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    background-color: rgb(196, 45, 191);
+    border-radius: 8px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 0 0 8px #800073c2;
+}
+.frame{
+    box-shadow: 0 0 8px #800073c2;
+    width: fit-content;
+    padding: 50px;
+    margin: auto;
+    border-radius: 8px;
+    background-color: aqua;
 }

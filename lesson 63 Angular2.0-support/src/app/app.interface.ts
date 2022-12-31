@@ -7,5 +7,5 @@ export interface Content {
     email: string;
     phone: string;
     content: string;
-    // isCompleted?: boolean;
+    isCompleted?: boolean;
 }

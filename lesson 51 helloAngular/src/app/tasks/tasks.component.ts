@@ -99,7 +99,7 @@ addTask() {
 
   TaskPriority(s: LevelTypes, item: Task){
     if(this.UrLevel == LevelTypes){
-      this.changePriority(s, item, LevelTypes.);
+      this.changePriority(s, item, LevelTypes);
     }
   }
 
