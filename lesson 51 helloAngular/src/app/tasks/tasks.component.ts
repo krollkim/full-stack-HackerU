@@ -91,17 +91,17 @@ addTask() {
    
     const struc = this.UrLevel.find(x => x.level == newPriority);
     item.UrLevel = newPriority;
-    struc?.level.valueOf();
+    
 
     sub.unsubscribe();
     });
   }
 
-  TaskPriority(s: LevelTypes, item: Task){
-    if(this.UrLevel == LevelTypes){
-      this.changePriority(s, item, LevelTypes);
-    }
-  }
+  // TaskPriority(s: LevelTypes, item: Task){
+  //   if(this.UrLevel == LevelTypes){
+  //     this.changePriority(s, item, LevelTypes);
+  //   }
+  // }
 
 //  const sub = this.http.put<void>("http://localhost:3000/tasks", { Priority: this.UrLevel }).subscribe(() => {
 //       this.UrLevel.find(x => x.level == item.UrLevel)?.

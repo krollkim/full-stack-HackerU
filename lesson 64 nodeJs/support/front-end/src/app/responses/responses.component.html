@@ -19,8 +19,9 @@
             <td>{{ item.content }}</td>
             <td>{{ item.isCompleted ? 'v' : 'x'}}</td>
             <td><button class="w3-btn w3-red w3-round" (click)="remove(item)">x</button></td>
-            <td><button class="w3-btn w3-green w3-round" (click)="complete(item)">סמן כטופל</button></td>
-            <td><button class="w3-btn w3-orange w3-round" (click)="undo(item)">בטל טיפול</button></td>
+            <td><button *ngIf="!item.isCompleted" class="w3-btn w3-green w3-round" (click)="complete(item)">סמן כטופל</button>
+                <button *ngIf="item.isCompleted" class="w3-btn w3-orange w3-round" (click)="undo(item)">בטל טיפול</button>
+                </td>
 
         </tr>
     </tbody>

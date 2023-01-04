@@ -30,7 +30,7 @@
                 </button>
 
                 <select [(ngModel)]="item.UrLevel">
-                    <option *ngFor="let l of UrLevel" value="{{ l.level }}" (click)="TaskPriority(s, item)">{{ l.title }}</option>
+                    <option *ngFor="let l of UrLevel" value="{{ l.level }}">{{ l.title }}</option>
                 </select>
             
         </div>

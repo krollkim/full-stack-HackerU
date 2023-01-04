@@ -14,6 +14,9 @@ export class ResponsesComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   remove(item: Response) {
+    if(!confirm('Are you sure you want to remove?')){
+      return;
+    }
     const sub = this.http.delete<void>(`http://localhost:3500/contact/${item.id}`).subscribe(() => {
         const i = this.data.findIndex(x => x.id === item.id);
         this.data.splice(i, 1);
