@@ -24,8 +24,9 @@ app.post('/gallery/upload', (req, res) => {
     form.parse(req, (err, fields, files) => {
         // זה השם שננו לקובץ ב-HTML
         const myFile = files.myFile;
-
+console.log(myFile);
         const oldPath = myFile.filepath;
+        
         const newPath = `./images/${myFile.originalFilename}`;
 
         fs.copyFile(oldPath, newPath, (err) => {
@@ -43,7 +44,51 @@ app.post('/gallery/upload', (req, res) => {
     });
 });
 
+app.post('/gallery/upload/multi', (req, res) => {
+    const form = new formidable.IncomingForm();
+
+    form.parse(req, (err, fields, files) => {
+
+        for (const key in files) {
+            const file = files[key];
+            const oldPath = file.filepath;
+            const newPath = `./images/${file.originalFilename}`;
+
+            fs.copyFile(oldPath, newPath, (err) => {
+                if (err) {
+                    console.log(err);
+                }
+
+            });
+
+            res.end();
+        }
+
+    });
+});
+
 app.get('/gallery/image/:imageName', (req, res) => {
     // __dirname = מביא את הניתוב של התיקייה שבה נמצא הקובץ הנוכחי
     res.sendFile(path.resolve(`${__dirname}/images/${req.params.imageName}`));
+});
+
+
+app.get('/gallery/images', (req, res) => {
+    fs.readdir(`${__dirname}/images`, (err, files) => {
+        if (err) {
+            throw err;
+        }
+
+        res.send(files);
+    });
+});
+
+app.delete('/gallery/image/:imageName', (req, res) => {
+    fs.unlink(`${__dirname}/images/${req.params.imageName}`, (err) => {
+        if (err) {
+            throw err;
+        }
+
+        res.send();
+    });
 });

@@ -3,7 +3,7 @@ body {
     background: aliceblue;
 }
 
-form {
+form, #form {
     max-width: 700px;
     background: #ffffffcc;
     padding: 32px;
@@ -19,3 +19,47 @@ h1 {
 .field {
     margin-bottom: 12px;
 }
+
+.dropArea{
+    height: 250px;
+    border: 2px dashed gray;
+    text-align: center;
+    padding: 86px 0;
+}
+
+.dropArea::after{
+   content: 'release here';
+   color: gray;
+   font-size: 30px;
+}
+
+.drag:active {
+    border: 2px dashed black;
+}
+
+.card:active {
+    opacity: 0.3;
+    cursor: grab;
+}
+[draggable] {
+    user-select: none;
+}
+.w3-third {
+    padding: 12px;
+}
+
+.w3-card {
+    height: 150px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.w3-card button {
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.w3-card:hover button {
+    opacity: 1;
+}
+
