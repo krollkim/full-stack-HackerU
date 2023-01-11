@@ -18,7 +18,7 @@
         <!-- <form action="http://localhost:770/gallery/upload" method="post" enctype="multipart/form-data"> -->
 
     <div  class="drag" id="form">
-            <div class="dropArea card" ondragover="dragOver(event)" ondrop="dropFiles(event)" draggable="true"></div>
+            <div class="dropArea" ondragleave="isDrag(false)" ondragover="dragOver(event)" ondrop="dropFiles(event)" draggable="true"></div>
 
             <ul class="w3-ul"></ul>
 

@@ -24,13 +24,12 @@ function imageChange(ev) {
 
 function dragOver(ev) {
     ev.preventDefault();
-    // const drag = document.querySelector('.drag');
-    // drag.style.border = '2px dashed black';
+    isDrag(true);
 }
 
 function dropFiles(ev) {
     ev.preventDefault();
-
+    isDrag(false)
     const files = ev.dataTransfer.files;
     filesToUpload = files;
 
@@ -93,11 +92,21 @@ function getImages(){
     });
 };
 
-function remove(elem, imageName) {
+function remove(elemId, imageName) {
     fetch(`http://localhost:770/gallery/image/${imageName}`, {
         method: 'DELETE',
     }).then(() => {
         console.log('Removed');
         document.getElementById(elemId).remove();
     })
+}
+
+function isDrag(bool){
+    const elem = document.querySelector(".dropArea");
+
+    if(bool){
+        elem.classList.add("dragOver");
+    }else{
+        elem.classList.remove("dragOver");
+    }
 }

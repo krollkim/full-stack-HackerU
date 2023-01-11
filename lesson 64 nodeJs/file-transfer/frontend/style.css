@@ -32,18 +32,10 @@ h1 {
    color: gray;
    font-size: 30px;
 }
-
-.drag:active {
-    border: 2px dashed black;
+.dragOver{
+    background-color: palevioletred;
 }
 
-.card:active {
-    opacity: 0.3;
-    cursor: grab;
-}
-[draggable] {
-    user-select: none;
-}
 .w3-third {
     padding: 12px;
 }

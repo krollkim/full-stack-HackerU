@@ -1,3 +1,5 @@
 hello/node_modules
 support/back-end/node_modules
 file-transfer/backend/node_modules
+tasks/frontend/node_modules
+tasks/backend/node_modules

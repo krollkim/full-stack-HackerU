@@ -1,9 +1,16 @@
 th, td{
     text-align: center;
-}
-.w3-btn {
+    
+    
+    button {
     margin: 0 3px;
     padding: 3px 8px;
     font-size: 14px;
     border-radius: 11px;
+ 
+    &:hover{
+        box-shadow: 5px, 5px 5px rgb(255, 0, 43);
+    }
+  }
 }
+
