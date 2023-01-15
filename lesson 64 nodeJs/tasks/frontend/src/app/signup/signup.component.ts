@@ -3,6 +3,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { User } from './user.interface';
 import { HttpService } from '../http.service';
 import { finalize } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -36,17 +37,16 @@ export class SignupComponent implements OnInit {
 
   signup() {
     const sub = this.http.post<User>('signup', this.signupForm.value).pipe(finalize(() => {
-      if(sub?.unsubscribe){
-        sub.unsubscribe();
-      }
-    sub.unsubscribe();
+        if (sub?.unsubscribe) {
+            sub.unsubscribe();
+        }
     })).subscribe(data => {
-      console.log(data);
-      
+        this.router.navigate(['/login']);
     });
-  }
+}
 
-  constructor(private http: HttpService) { }
+constructor(private http: HttpService, private router: Router) { }
+
 
   ngOnInit(): void {
   }
