@@ -59,6 +59,7 @@ export function login(req, res) {
             });
         }
         else{
+            delete req.session.attemtps;
             const user = result[0];
             req.session.user = user;
         
