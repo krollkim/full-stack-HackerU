@@ -11,6 +11,8 @@ import { RouterModule } from '@angular/router';
 import { routes } from './routing';
 import { UtilityService } from './Utilityservice';
 import { HttpService } from './http.service';
+import { NavbarComponent } from './navbar/navbar.component';
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -19,7 +21,9 @@ import { HttpService } from './http.service';
     AppComponent,
     TasksComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    NavbarComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

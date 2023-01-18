@@ -1,1 +1,18 @@
-<app-signup></app-signup>
+<div *ngIf="utility.getUser()">
+    <p class="welcome">
+        <button class="w3-btn w3-white w3-round" (click)="logout()"><i class="fa fa-sign-out"></i> logout</button>welcome! 
+        {{ utility.getUser()?.fullName }}
+        
+    </p>
+    <h1>{{ title }}</h1>
+
+    <div id="frame">
+        <app-navbar></app-navbar>
+        <router-outlet></router-outlet>
+    </div>
+
+</div>
+
+<div *ngIf="!utility.getUser()">
+    <router-outlet></router-outlet>
+</div>

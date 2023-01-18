@@ -1,7 +1,11 @@
-import express from 'express';
+import express, { request } from 'express';
 import cors from 'cors';
 import './sqlConnect';
 import { signup } from './services/signup';
+import { getLoginStatus, login, logout } from './services/login';
+// import * as session from 'express-session';
+const session = require('express-session');
+
 
 const app = express();
 
@@ -12,13 +16,34 @@ app.use(cors({
     allowedHeaders: 'Content-Type, Accept',
 }));
 
+app.use(session({
+    secret: 'my-secret',
+    name: 'mySession',
+    resave: false,
+    saveUninitialized: false,
+}));
+
+
 app.use(express.json());
+
 app.listen(3000, () => {
     console.log('listening on 3000');
 });
 
 app.get('/', (req, res) => {
-    res.send("Hello World");
+
+    if (!req.session.attemps) {
+        req.session.attemps = 0;
+    }
+    req.session.attemps++;
+    
+    res.send({
+        attemps: req.session.attemps,
+        message: 'כניסה נכשלה לאחר 3 נסיונות',
+    });
 });
 
+app.get('/logout', logout);
+app.get('/login', getLoginStatus);
 app.post('/signup', signup)
+app.post('/login', login);
