@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { TasksComponent } from './tasks/tasks.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { routes } from './routing';
@@ -13,6 +13,7 @@ import { UtilityService } from './Utilityservice';
 import { HttpService } from './http.service';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
+import { RecycleBinComponent } from './tasks/recycle-bin/recycle-bin.component';
 
 
 
@@ -24,12 +25,14 @@ import { HomeComponent } from './home/home.component';
     SignupComponent,
     NavbarComponent,
     HomeComponent,
+    RecycleBinComponent,
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     HttpClientModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    FormsModule
   ],
   providers: [
     HttpService,

@@ -2,6 +2,7 @@ import { Routes } from "@angular/router";
 import { HomeComponent } from "./home/home.component";
 import { LoginComponent } from "./login/login.component";
 import { SignupComponent } from "./signup/signup.component";
+import { RecycleBinComponent } from "./tasks/recycle-bin/recycle-bin.component";
 import { TasksComponent } from "./tasks/tasks.component";
 
 
@@ -10,5 +11,6 @@ import { TasksComponent } from "./tasks/tasks.component";
         { path: 'login', component: LoginComponent },
         { path: 'signup', component: SignupComponent, canLoad: [] },
         { path: 'tasks', component: TasksComponent },
+        { path: 'recycle-bin', component: RecycleBinComponent },
     ];
     
