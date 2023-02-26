@@ -3,7 +3,8 @@ import cors from 'cors';
 import './sqlConnect';
 import { signup } from './services/signup';
 import { getLoginStatus, login, logout } from './services/login';
-import { addTask, changeTaskLevel, changeTaskStatus, getTasks, removeTask, returnTask } from './services/tasks';
+import { addTask, changeTaskLevel, changeTaskStatus, getCounterTasks, getTask, getTasks, removeTask, returnTask, updateTask } from './services/tasks';
+import { addProduct, getCartProducts, getProduct, getProducts, removeProduct, restoreProduct, updateProduct } from './services/products';
 // import * as session from 'express-session';
 const session = require('express-session');
 
@@ -61,7 +62,7 @@ app.get('/', (req, res) => {
 });
 
 function authGurd(req, res, next) {
-    if (unGuards.includes(req.url) || req.session.user) {
+    if (req.session.user) {
         next();
     } else {
         res.sendStatus(401);
@@ -73,11 +74,21 @@ app.get('/login', getLoginStatus);
 app.post('/signup', signup)
 app.post('/login', login);
 
+//getCounterTasks
+app.get('/tasks/counter', authGurd, getCounterTasks);
 app.get('/tasks',authGurd, getTasks);
+app.get('/task/:id',authGurd, getTask);
 app.post('/tasks',authGurd, addTask);
+app.put('/task/:id', authGurd, updateTask);
 app.put('/tasks/:taskId/status/:newStatus',authGurd, changeTaskStatus);
 app.put('/tasks/:taskId/level/:newLevel',authGurd, changeTaskLevel);
 app.put('/tasks/restore/:returnId',authGurd, returnTask);
-
 app.delete('/tasks/:id',authGurd, removeTask);
 
+app.get('/products',authGurd, getProducts);
+app.post('/products/cart', authGurd, getCartProducts);
+app.get('/product/:id',authGurd, getProduct);
+app.post('/products',authGurd, addProduct);
+app.put('/product/:id', authGurd, updateProduct);
+app.put('/product/restore/:id', authGurd, restoreProduct);
+app.delete('/products/:id',authGurd, removeProduct);

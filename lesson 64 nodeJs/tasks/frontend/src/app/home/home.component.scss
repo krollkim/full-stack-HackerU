@@ -1,3 +1,27 @@
+// dashbord
+
+.w3-row {
+    padding: 0 12px;
+    
+    .w3-third {
+        padding: 8px;
+       float: left;
+
+        .w3-card {
+            padding: 4px 12px;
+
+            h4, p {
+                margin: 0;
+                text-align: center;
+            }
+
+            p {
+                font-size: 4em;
+            }
+        }
+    }
+}
+
 section {
     min-height: 500px;
     max-width: 800px;
@@ -7,7 +31,7 @@ section {
     align-items: center;
 }
 
-div {
+div{
     width: 150px;
     height: 150px;
     border-radius: 25%;

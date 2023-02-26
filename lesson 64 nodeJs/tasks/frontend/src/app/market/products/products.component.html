@@ -1,0 +1,17 @@
+<div class="w3-row">
+    <div class="w3-third" *ngFor="let item of data">
+        <div class="w3-container w3-card">
+
+            <div class="w3-section">
+                <h2>{{ item.name }}</h2>
+                <h3 style="text-decoration: line-through;">{{ item.price }}</h3>
+                <h5>discount: <small>{{ item.discount }}</small> nis</h5>
+                <h5 *ngIf="item.discount"><b>total: {{ item.price - item.discount }} nis</b></h5>
+                <h5 *ngIf="!item.discount"><b>{{ item.price - item.discount }} nis</b></h5>
+        
+                <button class="w3-button w3-green w3-round" (click)="add(item)">add to cart 
+                <i class="shopping-cart"></i></button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+<h2 *ngIf="!product">add product:</h2>
+<h2 *ngIf="product">edit product:</h2>
+
+<form *ngIf="form" [formGroup]="form">
+    <div class="field">
+        <label>product name:</label>
+        <input class="w3-input w3-border w3-round" type="text" formControlName="name">
+    </div>
+
+    <div class="field">
+        <label>price:</label>
+        <input class="w3-input w3-border w3-round" type="text" formControlName="price">
+    </div>
+
+    <div class="field">
+        <label>discount:</label>
+        <input class="w3-input w3-border w3-round" type="text" formControlName="discount">
+    </div>
+
+    
+    <button class="w3-btn w3-green w3-round w3-block" [disabled]="!form.valid" (click)="add()">add <i class="fa fa-save"></i></button>
+    <br>
+    <button class="w3-btn w3-green w3-round w3-block" [disabled]="!form.valid" (click)="save()">save <i class="fa fa-save"></i></button>
+</form>

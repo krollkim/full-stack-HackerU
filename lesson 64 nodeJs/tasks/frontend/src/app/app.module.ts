@@ -14,6 +14,14 @@ import { HttpService } from './http.service';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { RecycleBinComponent } from './tasks/recycle-bin/recycle-bin.component';
+import { TaskEditComponent } from './tasks/task-edit/task-edit.component';
+import { ErrorPageComponent } from './error-page/error-page.component';
+import { MarketComponent } from './market/market.component';
+import { ProductsManagmentComponent } from './market/products-managment/products-managment.component';
+import { ProductComponent } from './market/products-managment/product/product.component';
+import { AboutComponent } from './about/about.component';
+import { CartComponent } from './market/cart/cart.component';
+import { ProductsComponent } from './market/products/products.component';
 
 
 
@@ -26,6 +34,14 @@ import { RecycleBinComponent } from './tasks/recycle-bin/recycle-bin.component';
     NavbarComponent,
     HomeComponent,
     RecycleBinComponent,
+    TaskEditComponent,
+    ErrorPageComponent,
+    MarketComponent,
+    ProductsManagmentComponent,
+    ProductComponent,
+    AboutComponent,
+    CartComponent,
+    ProductsComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { HttpService } from '../http.service';
-import { TaskStatuses, Structure, Task, LevelTypes} from './tasks.interface';
+import { TaskStatuses, Structure, Task, LevelTypes, UrLevel} from './tasks.interface';
 
 @Component({
   selector: 'app-tasks',
@@ -35,24 +36,8 @@ export class TasksComponent implements OnInit {
     }
   ];
 
-  UrLevel = [
-    {
-      level: LevelTypes.low,
-      title: 'low-priority',
-      color: 'yellow',
-    },
-    {
-      level: LevelTypes.medium,
-      title: 'medium-priority',
-      color: 'orange',
-    },
-    {
-      level: LevelTypes.high,
-      title: 'high-priority',
-      color: 'red',
-    }
-   
-  ];
+  displayMode: 'columns' | 'table' | 'list' | 'folders' = 'columns';
+  UrLevel = UrLevel;
   
 addTask() {
 
@@ -144,8 +129,11 @@ addTask() {
     this.sections.forEach(x => x.isDrag = false);
 }
 
+navigateTask(item: Task) {
+  this.router.navigate(['task', item.id]);
+}
 
-  constructor(private http: HttpService) { }
+  constructor(private http: HttpService, private router: Router) { }
 
   ngOnInit(): void {
     const sub = this.http.get<Task[]>("tasks").subscribe(data => {
