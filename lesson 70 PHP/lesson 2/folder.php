@@ -6,15 +6,21 @@
         mkdir('folders/תיקייה 3', 0777, true);
     }
     
+    $current = "./folders";
+
+    if(isset($_REQUEST['path'])){
+        $current = $_REQUEST['path'];
+    }
+
     if (isset($_POST['folderName'])) {
-        $path = "folders/" . $_POST['folderName'];
+        $path = $current . "/" . $_POST['folderName'];
 
         if (!is_dir($path)) {
             mkdir($path, 0777, true);
         }
     }
 
-    $folders = scandir("folders");
+    $folders = scandir($current);
 
     array_splice($folders, 0, 2);
 ?>
@@ -55,19 +61,23 @@
     
     
     <div class="container">
-        <h1>folders</h1>
+    <h1 style="direction: ltr;"><?= $current ?></h1>
+        
 
         <? foreach ($folders as $f) { ?>
-            <div class="card">
+            <form action="folder.php" method="GET" class="card" ondblclick="this.submit()">
                 <i class="fa fa-folder"></i>
                 <p><?= $f ?></p>
-            </div>
+
+                <input type="hidden" value="<?=$current?>/<?=$f?>" name="path">
+            </form>
         <? } ?>
 
             
            <form action="folder.php" method="POST" class="card" style="color: black; padding: 18px 8px; width: 120px;">
             <i class="fa fa-plus"></i>
-            <p><input placeholder="תיקייה חדשה" name="folderName" style="width: 100%; text-align: center; padding: 6px; border: 0; border-bottom: 1px solid gray;" autofocus></p>
+            <p><input placeholder="תיקייה חדשה" name="folderName" style="width: 100%; text-align: center; padding: 6px; border: 0; border-bottom: 1px solid gray;" autofocus>
+            <input type="hidden" value="<?= $current ?>" name="path"></p>
         </form>
     </div>
 </body>
