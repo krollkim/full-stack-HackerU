@@ -44,6 +44,8 @@
     <? include 'template/navbar.php'; ?>
     
     <div class="container">
+    <a class="btn btn-success" href="articles-new.php">add article <i class="fa fa-plus"></i></a>
+        <br><br>
         <table class="table table-striped">
             <thead>
                 <tr>

@@ -2,6 +2,6 @@
     <? if (isset($_SESSION['user'])) { ?>
         <p class="userName"><?= $_SESSION['user']['fullName'] ?>, welcome!</p>
     <? } ?>
-<h1>landing page</h1>
-<p>see my projects, And resize this responsive page to see the effect!</p>
+<h1>web 4 articles</h1>
+<p>manage, add edit and delete articles, resize this responsive page to see the effect!</p>
 </div>

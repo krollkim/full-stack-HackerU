@@ -8,6 +8,7 @@
 .container{
     margin-top: 25px;
     min-height: 600px;
+    
 }
 .formContainer{
     margin-bottom: 20px;
@@ -55,4 +56,7 @@
     color: white;
     border: 1px solid white !important;
 
+}
+.col-sm-4{
+    padding: 16px;
 }
