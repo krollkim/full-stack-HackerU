@@ -43,17 +43,17 @@
     <? include 'template/navbar.php'; ?>
     <br>
     
-    <h1>ניהול פניות</h1>
+    <h1 style="text-align: center;">manage inquiries</h1>
 
     <div class="container">
         <table class="table table-striped">
             <thead>
                 <tr>
                     <th>#</th>
-                    <th>תאריך הוספה</th>
-                    <th>שם מלא</th>
-                    <th>אימייל</th>
-                    <th>תוכן</th>
+                    <th>published time</th>
+                    <th>full name</th>
+                    <th>email</th>
+                    <th>content</th>
                     <th></th>
                 </tr>
             </thead>

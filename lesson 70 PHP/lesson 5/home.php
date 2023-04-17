@@ -16,6 +16,7 @@
         "title",
         "description",
         "content",
+        "image",
     ], [
         "isDeleted" => false,
         "ORDER" => ["publishedTime" => "DESC"],
@@ -34,6 +35,7 @@
                 <div class="col-sm-4">
                     <div class="card bg-dark">
                         <div class="card-body">
+                        <img src="images/<?= $a['image'] ?>" width="100%">
                             <h4 class="card-title"><?= $a['title'] ?></h4>
                             <p class="card-text"><?= $a['description'] ?></p>
                             <a href="#" class="btn btn-primary">show article</a>
