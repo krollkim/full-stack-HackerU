@@ -1,9 +1,24 @@
-import React from 'react'
+import { Divider, Typography } from '@mui/material';
+import React from 'react';
+import { string } from 'prop-types';
 
-const PageHeader = () => {
+const PageHeader = ({ title, subtitle }) => {
   return (
-    <div>PageHeader</div>
+    <>
+        <Typography variant='h2' component="h1">
+            {title}
+        </Typography>
+        <Typography variant='h5' component="h2">
+            {subtitle}
+        </Typography>
+    <Divider sx={{my: 2}}/>
+    </>
   )
 }
 
-export default PageHeader;
+PageHeader.propTypes = {
+    title: string.isRequired,
+    subtitle: string.isRequired
+};
+
+export default PageHeader

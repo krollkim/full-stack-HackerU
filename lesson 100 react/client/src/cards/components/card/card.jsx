@@ -1,40 +1,46 @@
-import React from 'react'
-import { Button, Box, Card, CardMedia, CardContent, Typography, Divider, List, ListItem} from "@mui/material";
-import CreateIcon from '@mui/icons-material/Create';
-import DeleteIcon from "@mui/icons-material/Delete";
-import CallIcon from '@mui/icons-material/Call';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-const CardComponent = () => {
+import React from 'react';
+import cardType from '../../models/types/cardType';
+import CardHead from './CardHead';
+import CardBody from './CardBody';
+import CardActionBar from './CardActionBar';
+import {func} from 'prop-types'
+
+import {
+    Box,
+    Card,
+    CardActionArea,
+} from "@mui/material";
+
+
+const CardComponent = ({ card, onDelete, onLike, onEdit }) => {
+
   return (
  <>
-    <Box sx={{display: "flex", justifyContent: "center"}}>
-    <Card sx={{ width: 270, height: 470, m: 2, background: "pink"}}>
-            <CardMedia sx={{height: 250 , p: 1}} 
-            component="img" image="assets/images/card-img.png" />
-            <CardContent>
-                <Typography component="h1" sx={{color: "black", textAlign: "left", p:0.5}}>Kroll Kim</Typography>
-                <Typography fontSize="small" component="h2" sx={{color: "black", textAlign: "left", marginBottom: 2, p:0.5}}>Fullstack-Dev</Typography>
-                <Divider/>
-                <List>
-                    <ListItem sx={{p:0}} disablePadding>Phone: 052-5890252</ListItem>
-                    <ListItem sx={{p:0}} disablePadding>Address: Tlv-Center</ListItem>
-                    <ListItem sx={{p:0}} disablePadding>Email: kimkroll2000@gmail.com</ListItem>
-                </List>
-            </CardContent>
-            <Box sx={{display: "flex", justifyContent: "space-between"}}>
-                <Box>
-                    <Button startIcon={<DeleteIcon />}></Button> 
-                    <Button startIcon={<CreateIcon />}></Button>
-                </Box>
-                <Box>
-                    <Button endIcon={<CallIcon />}></Button> 
-                    <Button endIcon={<FavoriteIcon />}></Button>
-                </Box>
-            </Box>
-        </Card>
-    </Box>
+
+ {/* fourth card, with props injaction and loop */}
+  <Box sx={{display: "flex", justifyContent: "center", mt: 10, mb: 20}}>
+    <Card sx={{minWidth: 300, maxWidth: 350}} raised>
+        <CardActionArea>
+            <CardHead image={card.image}/>
+            <CardBody card={card}/>
+        </CardActionArea>
+            <CardActionBar 
+            cardId={card._id}
+            onDelete={onDelete}
+            onLike={onLike}
+            onEdit={onEdit}
+            />
+    </Card>
+  </Box>
  </>
  )
 }
+
+CardComponent.propTypes = {
+  card: cardType.isRequired,
+  onLike: func.isRequired,
+  onDelete: func.isRequired,
+  onEdit: func.isRequired,
+};
 
 export default CardComponent
