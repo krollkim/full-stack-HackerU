@@ -14,7 +14,7 @@ const CardsPage = () => {
         email: "test@test.com",
         web: "http://www.test.co.il",
         image: {
-            url: "assets/images/horse.png",
+            url: "assets/images/horse-glasses.png",
             alt: "business card image",
         },
         address: {
@@ -30,7 +30,7 @@ const CardsPage = () => {
     },
     {
         _id: "63765801e20ed868a69a62c2",
-        title: "first",
+        title: "second",
         subtitle: "subtitle",
         description: "testing 123",
         phone: "050-0000000",
@@ -53,14 +53,14 @@ const CardsPage = () => {
     },
     {
         _id: "63765801e20ed868a69a62c3",
-        title: "first",
+        title: "thired",
         subtitle: "subtitle",
         description: "testing 123",
         phone: "050-0000000",
         email: "test@test.com",
         web: "http://www.test.co.il",
         image: {
-            url: "assets/images/horse.png",
+            url: "assets/images/izenberg.png",
             alt: "business card image",
         },
         address: {
@@ -77,7 +77,7 @@ const CardsPage = () => {
 ];
 
   return (
-    <Container sx={{mt: 2}}>
+    <Container>
         <PageHeader title="Cards" subtitle="On this page you can find all business cards from all categories"/>
 
         <Cards cards={cards}/>

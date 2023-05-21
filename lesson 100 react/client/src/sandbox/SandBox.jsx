@@ -1,6 +1,12 @@
 import React from 'react'
-import AppBarComponent from '../components/AppBarComponent'
-import MuiBottomNavigators from './layouts/footer/MuiBottomNavigators'
+// import SetPost from './hooks/SetPost'
+import { AppBar, Toolbar  } from '@mui/material'
+import NavItem from '../routes/NavItem'
+import { Container } from '@mui/system'
+import { Outlet } from 'react-router-dom'
+
+// import AppBarComponent from '../components/AppBarComponent'
+// import MuiBottomNavigators from './layouts/footer/MuiBottomNavigators'
 // import SetArray from './hooks/useState/SetArray'
 // import SetCounter from './hooks/useState/SetCounter'
 // import UseState from './hooks/useState/UseState'
@@ -14,7 +20,8 @@ import MuiBottomNavigators from './layouts/footer/MuiBottomNavigators'
 
 const SandBox = () => {
   return (
-  // <Father/>
+  <>
+  {/* // <Father/>
   // <CardComponent/>
   // <Loops />
   // <Events />
@@ -24,9 +31,28 @@ const SandBox = () => {
   // <UseStateWithComplex />
   // <SetCounter />
   // <SetArray />
-  <>
-    <AppBarComponent />
-    <MuiBottomNavigators />
+  // <AppBarComponent />
+  // <MuiBottomNavigators /> */}
+  {/* <SetPost /> */}
+
+  <AppBar position="static" color="transparent">
+    <Toolbar>
+      <NavItem label="props" to="props" color="black"/>
+      <NavItem label="fetch" to="fetch" color="black"/>
+      <NavItem label="custom hook" to="custom-hook" color="black"/>
+      <NavItem label="propTypes" to="propTypes" color="black"/>
+      <NavItem label="usecallback" to="use-callback" color="black"/>
+      <NavItem label="loops" to="loops" color="black"/>
+      <NavItem label="events" to="events" color="black"/>
+      <NavItem label="usememo" to="use-memo" color="black"/>
+      <NavItem label="axios" to="axios" color="black"/>
+    </Toolbar>
+  </AppBar>
+
+  <Container maxWidth="lg">
+    <Outlet />
+  </Container>
+
   </>
   
   )

@@ -10,17 +10,21 @@ import {
     Card,
     CardActionArea,
 } from "@mui/material";
+import { useNavigate } from 'react-router-dom';
+import ROUTES from '../../../routes/routesModel';
 
 
 const CardComponent = ({ card, onDelete, onLike, onEdit }) => {
 
+  const navigate = useNavigate();
   return (
  <>
 
  {/* fourth card, with props injaction and loop */}
   <Box sx={{display: "flex", justifyContent: "center", mt: 10, mb: 20}}>
     <Card sx={{minWidth: 300, maxWidth: 350}} raised>
-        <CardActionArea>
+        <CardActionArea
+          onClick={() => navigate(`${ROUTES.CARD_INFO}/${card._id}/${card.title}/${card.image.url.split("/")[2]}`)}>
             <CardHead image={card.image}/>
             <CardBody card={card}/>
         </CardActionArea>
