@@ -4,6 +4,7 @@ import { AppBar, Toolbar  } from '@mui/material'
 import NavItem from '../routes/NavItem'
 import { Container } from '@mui/system'
 import { Outlet } from 'react-router-dom'
+import SANDBOX_ROUTES from '../routes/sandboxRoutesModel'
 
 // import AppBarComponent from '../components/AppBarComponent'
 // import MuiBottomNavigators from './layouts/footer/MuiBottomNavigators'
@@ -37,15 +38,22 @@ const SandBox = () => {
 
   <AppBar position="static" color="transparent">
     <Toolbar>
-      <NavItem label="props" to="props" color="black"/>
-      <NavItem label="fetch" to="fetch" color="black"/>
-      <NavItem label="custom hook" to="custom-hook" color="black"/>
-      <NavItem label="propTypes" to="propTypes" color="black"/>
-      <NavItem label="usecallback" to="use-callback" color="black"/>
-      <NavItem label="loops" to="loops" color="black"/>
-      <NavItem label="events" to="events" color="black"/>
-      <NavItem label="usememo" to="use-memo" color="black"/>
-      <NavItem label="axios" to="axios" color="black"/>
+      <NavItem label="loops" to={SANDBOX_ROUTES.LOOPS} color="black"/>
+      {/* <NavItem label="props" to={SANDBOX_ROUTES.PROPS}color="black"/> */}
+      {/* <NavItem label="fetch" to={SANDBOX_ROUTES.FETCH} color="black"/> */}
+      {/* <NavItem label="customHook" to={SANDBOX_ROUTES.CUSTOM_HOOK} color="black"/> */}
+      <NavItem label="usecounter" to={SANDBOX_ROUTES.USE_COUNTER} color="black"/>
+      <NavItem label="usename" to={SANDBOX_ROUTES.USE_NAME} color="black"/>
+      {/* <NavItem label="propTypes" to={SANDBOX_ROUTES.PROPTYPES} color="black"/> */}
+      <NavItem label="usestate" to={SANDBOX_ROUTES.USE_STATE} color="black"/>
+      <NavItem label="events" to={SANDBOX_ROUTES.EVENTS} color="black"/>
+      {/* <NavItem label="usememo" to={SANDBOX_ROUTES.USE_MEMO} color="black"/> */}
+      {/* <NavItem label="axios" to={SANDBOX_ROUTES.AXIOS} color="black"/> */}
+      <NavItem label="hooks" to={SANDBOX_ROUTES.HOOKS} color="black"/>
+      <NavItem label="lifecyclehooks" to={SANDBOX_ROUTES.LIFE_CYCLE_HOOKS} color="black"/>
+      <NavItem label="usecallbackcomp" to={SANDBOX_ROUTES.USE_CALLBACK_COMP} color="black"/>
+      <NavItem label="use-context" to={SANDBOX_ROUTES.USE_CONTEXT} color="black"/>
+      
     </Toolbar>
   </AppBar>
 
