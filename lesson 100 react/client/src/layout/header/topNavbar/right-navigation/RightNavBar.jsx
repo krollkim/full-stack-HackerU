@@ -3,14 +3,18 @@ import IconButton from "@mui/material/IconButton";
 import Box from "@mui/material/Box";
 import SearchBar from "./SearchBar";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
-// import LightModeIcon from "@mui/icons-material/LightMode";
+import LightModeIcon from "@mui/icons-material/LightMode";
 import MoreButton from "./MoreButton";
 import Logged from "./Logged";
 import NotLogged from "./NotLogged";
 import Menu from "./Menu";
+import { useTheme } from "../../../../providers/ThemeProvider";
 
 const RightNavBar = () => {
-  // const user = true;
+
+  const {isDark, toggleDarkMode} = useTheme();
+
+  
   const user = false;
   let anchorEl = null;
 
@@ -29,9 +33,8 @@ const RightNavBar = () => {
       <Box sx={{ display: { xs: "none", md: "inline-flex" } }}>
         <SearchBar />
 
-        <IconButton sx={{ marginLeft: 1 }}>
-          {/* <LightModeIcon /> */}
-          <DarkModeIcon />
+        <IconButton sx={{ marginLeft: 1 }} onClick={toggleDarkMode}>
+          {isDark ? <LightModeIcon /> : <DarkModeIcon />}
         </IconButton>
 
         {!user && <NotLogged />}

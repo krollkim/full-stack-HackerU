@@ -11,33 +11,25 @@ const {
   pending, 
   error, 
   cards, 
-  card, 
+  // card, 
   handleGetCards,
-  handleGetCard,
-  handleGetMyCards,
-  handleCreateCard,
-  handleUpdateCard,
-  handleDeleteCard,
-  handleLikeCard
+  // handleGetCard,
+  // handleGetMyCards,
+  // handleCreateCard,
+  // handleUpdateCard,
+  // handleDeleteCard,
+  // handleLikeCard
 } = useCards();
 
 useEffect(()=> {
     handleGetCards();
-    handleGetCard();
-    handleGetMyCards();
-    handleCreateCard();
-    handleUpdateCard();
-    handleDeleteCard();
-    handleLikeCard();
-}, [
-  handleGetCards,
-  handleGetCard,
-  handleGetMyCards,
-  handleCreateCard,
-  handleUpdateCard,
-  handleDeleteCard,
-  handleLikeCard
-]);
+    // handleGetCard();
+    // handleGetMyCards();
+    // handleCreateCard();
+    // handleUpdateCard();
+    // handleDeleteCard();
+    // handleLikeCard();
+}, []);
 
 const onDeleteCard = () => {};
 
@@ -49,7 +41,7 @@ const onDeleteCard = () => {};
         pending={pending}
         error={error}
         cards={cards}
-        card={card}
+        // card={card}
         onDelete={onDeleteCard}
         />
     </Container>
