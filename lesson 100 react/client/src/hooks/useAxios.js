@@ -1,25 +1,31 @@
 import axios from 'axios';
-// import { useSnack } from '../providers/SnackbarProvider';
+import {useSnack} from '../providers/SnackbarProvider';
+import {useUser} from '../users/providers/UserProvider';
+import {useEffect} from 'react';
 
 const useAxios = () => {
-    // const snackFunc = useSnack();
-    axios.interceptors.request.use(data => {
-        console.log("Entered useAxios request"); 
-        return Promise.resolve(data);
-    }, null);
+  const {setSnack} = useSnack ();
+  const {token} = useUser ();
 
-    axios.interceptors.response.use(data => {
-        console.log("Entered useAxios response");
-        return Promise.resolve(data);
-    }, 
-    error => {
-        // const expectedError = error.response && error.response.status >= 400;
-        // if(expectedError){
-        //     snackFunc("error", error.message, "outlined")
-        // }
-        console.log("Entered useAxios response - error");
-        return Promise.reject(error);
-    });
+  useEffect (
+    () => {
+      axios.defaults.headers.common['x-auth-token'] = token;
+      axios.interceptors.request.use (data => {
+        return Promise.resolve (data);
+      }, null);
+
+      axios.interceptors.response.use (
+        data => {
+          return Promise.resolve (data);
+        },
+        error => {
+          setSnack ('error', error.message);
+          return Promise.reject (error);
+        }
+      );
+    },
+    [token, setSnack]
+  );
 };
 
-export default useAxios
+export default useAxios;

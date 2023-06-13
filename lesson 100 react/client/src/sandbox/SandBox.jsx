@@ -53,6 +53,7 @@ const SandBox = () => {
       <NavItem label="lifecyclehooks" to={SANDBOX_ROUTES.LIFE_CYCLE_HOOKS} color="black"/>
       <NavItem label="usecallbackcomp" to={SANDBOX_ROUTES.USE_CALLBACK_COMP} color="black"/>
       <NavItem label="use-context" to={SANDBOX_ROUTES.USE_CONTEXT} color="black"/>
+      <NavItem label="form" to={SANDBOX_ROUTES.FORM_PAGE} color="black"/>
       
     </Toolbar>
   </AppBar>

@@ -1,13 +1,13 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import ROUTES from "./routesModel";
-import CardsPage from "../pages/CardsPage";
+import CardsPage from "../cards/pages/CardsPage";
 import AboutPage from "../pages/AboutPage";
 import ErrorPage from "../pages/ErrorPage";
 import Sandbox from "../sandbox/SandBox";
 import SignupPage from "../users/pages/SignupPage";
 import LoginPage from "../users/pages/LoginPage";
-import CardDetailsPage from "../pages/CardDetailsPage";
+import CardDetailsPage from "../cards/pages/CardDetailsPage";
 import Cards from "../cards/components/Cards";
 import SANDBOX_ROUTES from "./sandboxRoutesModel";
 import Loops from "../sandbox/loops/Loops"
@@ -19,6 +19,7 @@ import LifeCycleHooks from "../sandbox/lifeCycleHooks/LifeCycleHooks";
 import UseCallBackComp from "../sandbox/memozation/UseCallBackComp";
 import SetPost from "../sandbox/hooks/SetPost";
 import A from "../sandbox/use-context/exeTwo/components/A";
+import FormTest from "../sandbox/forms/FormTest";
 
 const Router = () => {
   return (
@@ -36,6 +37,7 @@ const Router = () => {
         <Route path={SANDBOX_ROUTES.LIFE_CYCLE_HOOKS} element={<LifeCycleHooks />}/>
         <Route path={SANDBOX_ROUTES.USE_CALLBACK_COMP} element={<UseCallBackComp />}/> 
         <Route path={SANDBOX_ROUTES.USE_CONTEXT} element={<A />}/> 
+        <Route path={SANDBOX_ROUTES.FORM_PAGE} element={<FormTest />}/> 
       </Route>
       <Route path={ROUTES.SIGNUP} element={<SignupPage />} />
       <Route path={ROUTES.LOGIN} element={<LoginPage />} />

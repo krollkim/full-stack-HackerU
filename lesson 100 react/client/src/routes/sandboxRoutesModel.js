@@ -13,7 +13,8 @@ const SANDBOX_ROUTES = {
     HOOKS: "hooks",
     LIFE_CYCLE_HOOKS: "life-cycle-hooks",
     USE_CALLBACK_COMP: "use-callback-comp",
-    USE_CONTEXT: 'use-context'
+    USE_CONTEXT: 'use-context',
+    FORM_PAGE: 'form',
 }
 
 export default SANDBOX_ROUTES;

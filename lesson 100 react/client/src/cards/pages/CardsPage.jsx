@@ -1,8 +1,8 @@
 import { Container } from '@mui/system';
 import React, {useEffect} from 'react'
-import PageHeader from '../components/PageHeader';
-import CardsFeedback from '../cards/components/CardsFeedback';
-import useCards from '../cards/hooks/useCards';
+import PageHeader from '../../components/PageHeader';
+import CardsFeedback from '../components/CardsFeedback';
+import useCards from '../hooks/useCards';
 
 
 const CardsPage = () => {
