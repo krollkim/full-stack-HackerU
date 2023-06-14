@@ -11,6 +11,9 @@ const ROUTES = {
     MY_CARDS: "/my-cards",
     LOGO: "cards",
     LOGOICON: "cards",
+    USERPROFILE: "/user-profile",
+    // EDITPROFILE: "/edit-profile",
+
 }
 
 export default ROUTES;
