@@ -11,18 +11,18 @@ import {
 import {func, string} from "prop-types";
 import { useUser } from '../../../users/providers/UserProvider';
 
-const CardActionBar = ({cardId, onDelete, onLike, onEdit }) => {
+const CardActionBar = ({cardId, onDelete, onLike, onEdit, userId }) => {
   const { user } = useUser();
   return (
    
 <CardActions sx={{pt:0, justifyContent: "space-between"}}>
 <Box>
-    { user && cardId && user.isAdmin && (
+    {(user && (user?._id === userId || user.isAdmin)) && (
     <IconButton aria-label='delete' onClick={()=>onDelete(cardId)}>
       <DeleteIcon/>
    </IconButton>
     )}
-    { user && cardId && (
+    { user && user?._id === userId && (
     <IconButton aria-label='edit' onClick={()=>onEdit(cardId)}>
       <CreateIcon/>
     </IconButton>

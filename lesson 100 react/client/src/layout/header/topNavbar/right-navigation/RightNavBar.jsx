@@ -10,6 +10,8 @@ import NotLogged from "./NotLogged";
 import Menu from "./Menu";
 import { useTheme } from "../../../../providers/ThemeProvider";
 import { useUser } from "../../../../users/providers/UserProvider";
+import { color } from "@mui/system";
+import { style } from "@mui/system/Stack/createStack";
 
 const RightNavBar = () => {
   const { isDark, toggleDarkMode } = useTheme();
@@ -43,11 +45,15 @@ const RightNavBar = () => {
 
       <MoreButton onClick={setAnchorEl} />
 
-      <Menu
+    {<DarkModeIcon /> && (
+       <Menu
         isMenuOpen={Boolean(anchorEl)}
         anchorEl={anchorEl}
         onCloseMenu={closeMenu}
+        sx={{color: 'white'}}
       />
+    )}
+     
     </>
   );
 };

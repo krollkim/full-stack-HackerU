@@ -2,6 +2,7 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import ROUTES from "./routesModel";
 import CardsPage from "../cards/pages/CardsPage";
+import MyCardsPage from "../cards/pages/MyCardsPage";
 import AboutPage from "../pages/AboutPage";
 import ErrorPage from "../pages/ErrorPage";
 import Sandbox from "../sandbox/SandBox";
@@ -20,12 +21,15 @@ import UseCallBackComp from "../sandbox/memozation/UseCallBackComp";
 import SetPost from "../sandbox/hooks/SetPost";
 import A from "../sandbox/use-context/exeTwo/components/A";
 import FormTest from "../sandbox/forms/FormTest";
+import CreateCardPage from "../cards/pages/CreateCardPage";
 
 const Router = () => {
   return (
     <Routes>
       <Route path={ROUTES.ROOT} element={<CardsPage />} />
       <Route path={ROUTES.CARDS} element={<CardsPage />} />
+      <Route path={ROUTES.MY_CARDS} element={<MyCardsPage />} />
+      <Route path={ROUTES.CREATE_CARD} element={<CreateCardPage />} />
       <Route path={ROUTES.ABOUT} element={<AboutPage />} />
       <Route path={ROUTES.SANDBOX} element={<Sandbox />}>
         <Route path={SANDBOX_ROUTES.LOOPS} element={<Loops />}/>

@@ -56,11 +56,6 @@ const MenuComponent = ({ isOpen, anchorEl, onClose }) => {
               onClick={onClose}
               styles={{ color: "black" }}
             ></MenuLink>
-            {/* <MenuLink
-              text="signup"
-              navigateTo={ROUTES.EDIT_PROFILE}
-              onClick={onClose}
-            ></MenuLink> */}
             <MenuLink
               text="logout"
               navigateTo={ROUTES.CARDS}

@@ -1,12 +1,16 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import useAxios from "../../hooks/useAxios";
+import { useSnack } from "../../providers/SnackbarProvider";
+import ROUTES from "../../routes/routesModel";
+import normalizeCard from "../helpers/normalization/normalizeCards";
 import { 
   getCards,
   getCard,
+  getMyCards,
+  createCard,
   // deleteCard,
-  // createCard,
-  // editCard,
-  // getMyCards,    
+  // editCard,   
   // changeLikeStatus, 
 } from "../services/cardServices";
 
@@ -16,6 +20,8 @@ const useCards = () => {
   const [card, setCard] = useState(null);
   const [error, setError] = useState(null);
   const [pending, setPending] = useState(false);
+  const {setSnack} = useSnack();
+  const navigate = useNavigate();
 
   useAxios();
 
@@ -47,25 +53,28 @@ const useCards = () => {
     }
   };
 
-//   const handleGetMyCards = async () => {
-//     try {
-//       setPending(true);
-//       const cards = await getMyCards();
-//       requestStatus(false, null, cards, null);
-//     } catch (error) {
-//       requestStatus(false, error, null, null);
-//     }
-//   };
+  const handleGetMyCards = useCallback(async () => {
+    try{
+      setPending(true);
+      const cards = await getMyCards();
+      requestStatus(false, null, cards, null);
+    } catch(error) {
+      requestStatus(false, error, null, null);
+    }
+  }, [])
 
-//   const handleCreateCard = async (cardFromClient = {}) => {
-//     try {
-//       setPending(true);
-//       const card = await createCard(cardFromClient);
-//       requestStatus(false, null, null, card);
-//     } catch (error) {
-//       requestStatus(false, error, null, null);
-//     }
-//   };
+  const handleCreateCard = useCallback(async cardFromClient => {
+    try{
+      setPending(true);
+      const normalCard = normalizeCard(cardFromClient);
+      const card = await createCard(normalCard)
+      requestStatus(false, null, null, card);
+      setSnack('success', 'your card has been created!');
+      navigate(ROUTES.MY_CARDS);
+    } catch (error) {
+      requestStatus(false, error, null, null);
+    }
+  }, [setSnack, navigate]);
 
 //   const handleUpdateCard = async (cardFromClient = {}) => {
 //     try {
@@ -107,8 +116,8 @@ const useCards = () => {
     error,
     handleGetCards,
     handleGetCard,
-    // handleGetMyCards,
-    // handleCreateCard,
+    handleGetMyCards,
+    handleCreateCard,
     // handleUpdateCard,
     // handleDeleteCard,
     // handleLikeCard

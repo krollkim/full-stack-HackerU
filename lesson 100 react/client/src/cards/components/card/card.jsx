@@ -28,7 +28,8 @@ const CardComponent = ({ card, onDelete, onLike, onEdit }) => {
             <CardHead image={card.image}/>
             <CardBody card={card}/>
         </CardActionArea>
-            <CardActionBar 
+            <CardActionBar
+            userId={card.user_id}
             cardId={card._id}
             onDelete={onDelete}
             onLike={onLike}
